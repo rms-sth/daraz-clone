@@ -1,0 +1,88 @@
+[
+  {
+    "orderId": "ORD-2025-1001",
+    "date": "2025-12-20",
+    "status": "delivered",
+    "payment": "COD",
+    "total": 3798,
+    "items": [
+      {
+        "productId": "P1001",
+        "qty": 1,
+        "price": 1899
+      },
+      {
+        "productId": "P1032",
+        "qty": 1,
+        "price": 599
+      },
+      {
+        "productId": "P1029",
+        "qty": 1,
+        "price": 299
+      },
+      {
+        "productId": "P1037",
+        "qty": 1,
+        "price": 549
+      }
+    ],
+    "shippingAddress": {
+      "name": "Sushma Karki",
+      "phone": "9800000001",
+      "province": "Bagmati",
+      "city": "Kathmandu",
+      "area": "Baneshwor",
+      "landmark": "Near City Center"
+    }
+  },
+  {
+    "orderId": "ORD-2025-1002",
+    "date": "2025-12-28",
+    "status": "shipped",
+    "payment": "Card",
+    "total": 18999,
+    "items": [
+      {
+        "productId": "P1019",
+        "qty": 1,
+        "price": 18999
+      }
+    ],
+    "shippingAddress": {
+      "name": "Rajan Poudel",
+      "phone": "9800000002",
+      "province": "Bagmati",
+      "city": "Lalitpur",
+      "area": "Pulchowk",
+      "landmark": "Ring Road"
+    }
+  },
+  {
+    "orderId": "ORD-2026-0001",
+    "date": "2026-01-15",
+    "status": "placed",
+    "payment": "Wallet",
+    "total": 4698,
+    "items": [
+      {
+        "productId": "P1045",
+        "qty": 1,
+        "price": 1199
+      },
+      {
+        "productId": "P1046",
+        "qty": 1,
+        "price": 3499
+      }
+    ],
+    "shippingAddress": {
+      "name": "Maya Lama",
+      "phone": "9800000003",
+      "province": "Gandaki",
+      "city": "Pokhara",
+      "area": "Lakeside",
+      "landmark": "Boat House"
+    }
+  }
+]

@@ -1,0 +1,98 @@
+[
+  {
+    "productId": "P1001",
+    "user": "Sushma K.",
+    "stars": 5,
+    "title": "Great fabric",
+    "body": "Soft and comfortable, looks exactly like photos.",
+    "date": "2025-12-05"
+  },
+  {
+    "productId": "P1007",
+    "user": "Anita R.",
+    "stars": 5,
+    "title": "Brightening serum",
+    "body": "Visible glow after a week of use.",
+    "date": "2025-11-22"
+  },
+  {
+    "productId": "P1014",
+    "user": "Prakash S.",
+    "stars": 4,
+    "title": "Good for daily runs",
+    "body": "Lightweight but needs better insoles.",
+    "date": "2025-10-18"
+  },
+  {
+    "productId": "P1019",
+    "user": "Kiran M.",
+    "stars": 5,
+    "title": "Value for money",
+    "body": "Battery lasts long, camera is decent.",
+    "date": "2025-12-28"
+  },
+  {
+    "productId": "P1020",
+    "user": "Bikash T.",
+    "stars": 4,
+    "title": "Solid laptop",
+    "body": "Fast boot and smooth multitasking.",
+    "date": "2025-11-15"
+  },
+  {
+    "productId": "P1025",
+    "user": "Rupa G.",
+    "stars": 5,
+    "title": "Air fryer is excellent",
+    "body": "Crispy fries without much oil.",
+    "date": "2025-09-30"
+  },
+  {
+    "productId": "P1027",
+    "user": "Sanjay P.",
+    "stars": 4,
+    "title": "Nice sound",
+    "body": "Bass is good for the price.",
+    "date": "2025-12-02"
+  },
+  {
+    "productId": "P1032",
+    "user": "Nisha B.",
+    "stars": 5,
+    "title": "Great aroma",
+    "body": "Perfect for morning tea.",
+    "date": "2025-10-08"
+  },
+  {
+    "productId": "P1036",
+    "user": "Maya L.",
+    "stars": 5,
+    "title": "Super absorbent",
+    "body": "No leakage overnight.",
+    "date": "2025-12-10"
+  },
+  {
+    "productId": "P1040",
+    "user": "Rajan P.",
+    "stars": 4,
+    "title": "Nice quality",
+    "body": "Colors are vibrant and fabric is soft.",
+    "date": "2025-11-01"
+  },
+  {
+    "productId": "P1045",
+    "user": "Sita N.",
+    "stars": 5,
+    "title": "Perfect thickness",
+    "body": "Comfortable for yoga sessions.",
+    "date": "2025-10-20"
+  },
+  {
+    "productId": "P1047",
+    "user": "Ajay K.",
+    "stars": 4,
+    "title": "Handy for car",
+    "body": "Good suction, cable could be longer.",
+    "date": "2025-09-12"
+  }
+]

@@ -1,0 +1,1626 @@
+[
+  {
+    "id": "P1001",
+    "title": "Women's Floral Kurta Set",
+    "brand": "Himalayan Style",
+    "category": "Women's Fashion",
+    "subcategory": "Kurtas",
+    "price": 1899,
+    "oldPrice": 2499,
+    "discountPct": 24,
+    "rating": 4.6,
+    "ratingCount": 214,
+    "images": [
+      "assets/img/placeholder.svg",
+      "assets/img/placeholder.svg",
+      "assets/img/placeholder.svg"
+    ],
+    "stock": 58,
+    "seller": "Himalayan Style",
+    "location": "Kathmandu",
+    "shippingFee": 0,
+    "codAvailable": true,
+    "warranty": "No warranty",
+    "returnDays": 14,
+    "variants": {
+      "color": [
+        "Maroon",
+        "Teal",
+        "Black"
+      ],
+      "size": [
+        "S",
+        "M",
+        "L",
+        "XL"
+      ]
+    },
+    "badges": [
+      "Best Seller",
+      "Free Shipping"
+    ]
+  },
+  {
+    "id": "P1002",
+    "title": "Satin Maxi Dress",
+    "brand": "Lalitpur Fashion Hub",
+    "category": "Women's Fashion",
+    "subcategory": "Dresses",
+    "price": 2299,
+    "oldPrice": 2999,
+    "discountPct": 23,
+    "rating": 4.4,
+    "ratingCount": 96,
+    "images": [
+      "assets/img/placeholder.svg",
+      "assets/img/placeholder.svg",
+      "assets/img/placeholder.svg"
+    ],
+    "stock": 32,
+    "seller": "Lalitpur Fashion Hub",
+    "location": "Lalitpur",
+    "shippingFee": 60,
+    "codAvailable": true,
+    "warranty": "No warranty",
+    "returnDays": 14,
+    "variants": {
+      "color": [
+        "Navy",
+        "Wine"
+      ],
+      "size": [
+        "S",
+        "M",
+        "L"
+      ]
+    },
+    "badges": [
+      "Flash Deal"
+    ]
+  },
+  {
+    "id": "P1003",
+    "title": "Ribbed Crop Top",
+    "brand": "Himalayan Style",
+    "category": "Women's Fashion",
+    "subcategory": "Tops",
+    "price": 799,
+    "oldPrice": 999,
+    "discountPct": 20,
+    "rating": 4.2,
+    "ratingCount": 121,
+    "images": [
+      "assets/img/placeholder.svg",
+      "assets/img/placeholder.svg",
+      "assets/img/placeholder.svg"
+    ],
+    "stock": 80,
+    "seller": "Himalayan Style",
+    "location": "Kathmandu",
+    "shippingFee": 40,
+    "codAvailable": true,
+    "warranty": "No warranty",
+    "returnDays": 7,
+    "variants": {
+      "color": [
+        "Black",
+        "White",
+        "Olive"
+      ],
+      "size": [
+        "S",
+        "M",
+        "L"
+      ]
+    },
+    "badges": [
+      "Top Rated"
+    ]
+  },
+  {
+    "id": "P1004",
+    "title": "High Rise Skinny Jeans",
+    "brand": "Lalitpur Fashion Hub",
+    "category": "Women's Fashion",
+    "subcategory": "Jeans",
+    "price": 1999,
+    "oldPrice": 2599,
+    "discountPct": 23,
+    "rating": 4.3,
+    "ratingCount": 78,
+    "images": [
+      "assets/img/placeholder.svg",
+      "assets/img/placeholder.svg",
+      "assets/img/placeholder.svg"
+    ],
+    "stock": 45,
+    "seller": "Lalitpur Fashion Hub",
+    "location": "Lalitpur",
+    "shippingFee": 80,
+    "codAvailable": true,
+    "warranty": "No warranty",
+    "returnDays": 14,
+    "variants": {
+      "color": [
+        "Dark Blue",
+        "Light Blue"
+      ],
+      "size": [
+        "26",
+        "28",
+        "30",
+        "32"
+      ]
+    },
+    "badges": [
+      "Trending"
+    ]
+  },
+  {
+    "id": "P1005",
+    "title": "Classic Tote Handbag",
+    "brand": "Nepal Essentials",
+    "category": "Women's Fashion",
+    "subcategory": "Handbags",
+    "price": 1499,
+    "oldPrice": 1899,
+    "discountPct": 21,
+    "rating": 4.5,
+    "ratingCount": 66,
+    "images": [
+      "assets/img/placeholder.svg",
+      "assets/img/placeholder.svg",
+      "assets/img/placeholder.svg"
+    ],
+    "stock": 27,
+    "seller": "Nepal Essentials",
+    "location": "Bhaktapur",
+    "shippingFee": 50,
+    "codAvailable": true,
+    "warranty": "No warranty",
+    "returnDays": 14,
+    "variants": {
+      "color": [
+        "Tan",
+        "Black"
+      ],
+      "size": []
+    },
+    "badges": [
+      "Free Shipping"
+    ]
+  },
+  {
+    "id": "P1006",
+    "title": "Aloe Vera Face Wash 150ml",
+    "brand": "Nepal Essentials",
+    "category": "Health & Beauty",
+    "subcategory": "Skin Care",
+    "price": 399,
+    "oldPrice": 499,
+    "discountPct": 20,
+    "rating": 4.1,
+    "ratingCount": 188,
+    "images": [
+      "assets/img/placeholder.svg",
+      "assets/img/placeholder.svg",
+      "assets/img/placeholder.svg"
+    ],
+    "stock": 120,
+    "seller": "Nepal Essentials",
+    "location": "Kathmandu",
+    "shippingFee": 30,
+    "codAvailable": true,
+    "warranty": "No warranty",
+    "returnDays": 7,
+    "variants": {
+      "color": [],
+      "size": [
+        "150ml"
+      ]
+    },
+    "badges": [
+      "Best Seller"
+    ]
+  },
+  {
+    "id": "P1007",
+    "title": "Vitamin C Serum 30ml",
+    "brand": "Daraz Mall Official",
+    "category": "Health & Beauty",
+    "subcategory": "Skin Care",
+    "price": 1299,
+    "oldPrice": 1799,
+    "discountPct": 28,
+    "rating": 4.7,
+    "ratingCount": 322,
+    "images": [
+      "assets/img/placeholder.svg",
+      "assets/img/placeholder.svg",
+      "assets/img/placeholder.svg"
+    ],
+    "stock": 60,
+    "seller": "Daraz Mall Official",
+    "location": "Kathmandu",
+    "shippingFee": 0,
+    "codAvailable": true,
+    "warranty": "No warranty",
+    "returnDays": 14,
+    "variants": {
+      "color": [],
+      "size": [
+        "30ml"
+      ]
+    },
+    "badges": [
+      "DarazMall",
+      "Free Shipping"
+    ]
+  },
+  {
+    "id": "P1008",
+    "title": "Herbal Anti Dandruff Shampoo",
+    "brand": "Nepal Essentials",
+    "category": "Health & Beauty",
+    "subcategory": "Hair Care",
+    "price": 549,
+    "oldPrice": 699,
+    "discountPct": 21,
+    "rating": 4.0,
+    "ratingCount": 147,
+    "images": [
+      "assets/img/placeholder.svg",
+      "assets/img/placeholder.svg",
+      "assets/img/placeholder.svg"
+    ],
+    "stock": 90,
+    "seller": "Nepal Essentials",
+    "location": "Pokhara",
+    "shippingFee": 40,
+    "codAvailable": true,
+    "warranty": "No warranty",
+    "returnDays": 7,
+    "variants": {
+      "color": [],
+      "size": [
+        "400ml"
+      ]
+    },
+    "badges": []
+  },
+  {
+    "id": "P1009",
+    "title": "SPF 50 Sunscreen Lotion",
+    "brand": "Daraz Mall Official",
+    "category": "Health & Beauty",
+    "subcategory": "Personal Care",
+    "price": 899,
+    "oldPrice": 1199,
+    "discountPct": 25,
+    "rating": 4.6,
+    "ratingCount": 211,
+    "images": [
+      "assets/img/placeholder.svg",
+      "assets/img/placeholder.svg",
+      "assets/img/placeholder.svg"
+    ],
+    "stock": 75,
+    "seller": "Daraz Mall Official",
+    "location": "Kathmandu",
+    "shippingFee": 0,
+    "codAvailable": true,
+    "warranty": "No warranty",
+    "returnDays": 14,
+    "variants": {
+      "color": [],
+      "size": [
+        "100ml"
+      ]
+    },
+    "badges": [
+      "Top Rated"
+    ]
+  },
+  {
+    "id": "P1010",
+    "title": "Matte Lipstick Set (6 pcs)",
+    "brand": "Nepal Essentials",
+    "category": "Health & Beauty",
+    "subcategory": "Makeup",
+    "price": 999,
+    "oldPrice": 1299,
+    "discountPct": 23,
+    "rating": 4.3,
+    "ratingCount": 104,
+    "images": [
+      "assets/img/placeholder.svg",
+      "assets/img/placeholder.svg",
+      "assets/img/placeholder.svg"
+    ],
+    "stock": 48,
+    "seller": "Nepal Essentials",
+    "location": "Biratnagar",
+    "shippingFee": 50,
+    "codAvailable": true,
+    "warranty": "No warranty",
+    "returnDays": 7,
+    "variants": {
+      "color": [
+        "Warm",
+        "Cool"
+      ],
+      "size": []
+    },
+    "badges": [
+      "Flash Deal"
+    ]
+  },
+  {
+    "id": "P1011",
+    "title": "Men's Cotton Polo",
+    "brand": "Himalayan Style",
+    "category": "Men's Fashion",
+    "subcategory": "T-Shirts",
+    "price": 1099,
+    "oldPrice": 1399,
+    "discountPct": 21,
+    "rating": 4.2,
+    "ratingCount": 189,
+    "images": [
+      "assets/img/placeholder.svg",
+      "assets/img/placeholder.svg",
+      "assets/img/placeholder.svg"
+    ],
+    "stock": 85,
+    "seller": "Himalayan Style",
+    "location": "Kathmandu",
+    "shippingFee": 60,
+    "codAvailable": true,
+    "warranty": "No warranty",
+    "returnDays": 14,
+    "variants": {
+      "color": [
+        "Black",
+        "Blue",
+        "Grey"
+      ],
+      "size": [
+        "M",
+        "L",
+        "XL"
+      ]
+    },
+    "badges": []
+  },
+  {
+    "id": "P1012",
+    "title": "Formal Slim Fit Shirt",
+    "brand": "Lalitpur Fashion Hub",
+    "category": "Men's Fashion",
+    "subcategory": "Shirts",
+    "price": 1399,
+    "oldPrice": 1799,
+    "discountPct": 22,
+    "rating": 4.1,
+    "ratingCount": 95,
+    "images": [
+      "assets/img/placeholder.svg",
+      "assets/img/placeholder.svg",
+      "assets/img/placeholder.svg"
+    ],
+    "stock": 36,
+    "seller": "Lalitpur Fashion Hub",
+    "location": "Lalitpur",
+    "shippingFee": 70,
+    "codAvailable": true,
+    "warranty": "No warranty",
+    "returnDays": 14,
+    "variants": {
+      "color": [
+        "White",
+        "Sky Blue"
+      ],
+      "size": [
+        "M",
+        "L",
+        "XL"
+      ]
+    },
+    "badges": []
+  },
+  {
+    "id": "P1013",
+    "title": "Stretch Denim Jeans",
+    "brand": "Lalitpur Fashion Hub",
+    "category": "Men's Fashion",
+    "subcategory": "Jeans",
+    "price": 1899,
+    "oldPrice": 2399,
+    "discountPct": 21,
+    "rating": 4.3,
+    "ratingCount": 132,
+    "images": [
+      "assets/img/placeholder.svg",
+      "assets/img/placeholder.svg",
+      "assets/img/placeholder.svg"
+    ],
+    "stock": 44,
+    "seller": "Lalitpur Fashion Hub",
+    "location": "Lalitpur",
+    "shippingFee": 80,
+    "codAvailable": true,
+    "warranty": "No warranty",
+    "returnDays": 14,
+    "variants": {
+      "color": [
+        "Dark Blue"
+      ],
+      "size": [
+        "30",
+        "32",
+        "34",
+        "36"
+      ]
+    },
+    "badges": [
+      "Top Rated"
+    ]
+  },
+  {
+    "id": "P1014",
+    "title": "Lightweight Running Shoes",
+    "brand": "Himalayan Style",
+    "category": "Men's Fashion",
+    "subcategory": "Shoes",
+    "price": 2599,
+    "oldPrice": 3299,
+    "discountPct": 21,
+    "rating": 4.5,
+    "ratingCount": 205,
+    "images": [
+      "assets/img/placeholder.svg",
+      "assets/img/placeholder.svg",
+      "assets/img/placeholder.svg"
+    ],
+    "stock": 30,
+    "seller": "Himalayan Style",
+    "location": "Kathmandu",
+    "shippingFee": 90,
+    "codAvailable": true,
+    "warranty": "6 Months",
+    "returnDays": 14,
+    "variants": {
+      "color": [
+        "Black",
+        "Red"
+      ],
+      "size": [
+        "40",
+        "41",
+        "42",
+        "43"
+      ]
+    },
+    "badges": [
+      "Best Seller"
+    ]
+  },
+  {
+    "id": "P1015",
+    "title": "Classic Analog Watch",
+    "brand": "Nepal Essentials",
+    "category": "Watches & Accessories",
+    "subcategory": "Watches",
+    "price": 1999,
+    "oldPrice": 2499,
+    "discountPct": 20,
+    "rating": 4.4,
+    "ratingCount": 168,
+    "images": [
+      "assets/img/placeholder.svg",
+      "assets/img/placeholder.svg",
+      "assets/img/placeholder.svg"
+    ],
+    "stock": 52,
+    "seller": "Nepal Essentials",
+    "location": "Kathmandu",
+    "shippingFee": 0,
+    "codAvailable": true,
+    "warranty": "1 Year",
+    "returnDays": 14,
+    "variants": {
+      "color": [
+        "Black",
+        "Brown"
+      ],
+      "size": []
+    },
+    "badges": [
+      "Free Shipping"
+    ]
+  },
+  {
+    "id": "P1016",
+    "title": "Smart Fitness Band",
+    "brand": "Everest Electronics",
+    "category": "Watches & Accessories",
+    "subcategory": "Watches",
+    "price": 2899,
+    "oldPrice": 3599,
+    "discountPct": 19,
+    "rating": 4.2,
+    "ratingCount": 143,
+    "images": [
+      "assets/img/placeholder.svg",
+      "assets/img/placeholder.svg",
+      "assets/img/placeholder.svg"
+    ],
+    "stock": 40,
+    "seller": "Everest Electronics",
+    "location": "Kathmandu",
+    "shippingFee": 60,
+    "codAvailable": true,
+    "warranty": "6 Months",
+    "returnDays": 7,
+    "variants": {
+      "color": [
+        "Black",
+        "Blue"
+      ],
+      "size": []
+    },
+    "badges": []
+  },
+  {
+    "id": "P1017",
+    "title": "Genuine Leather Wallet",
+    "brand": "Nepal Essentials",
+    "category": "Watches & Accessories",
+    "subcategory": "Wallets",
+    "price": 899,
+    "oldPrice": 1199,
+    "discountPct": 25,
+    "rating": 4.3,
+    "ratingCount": 89,
+    "images": [
+      "assets/img/placeholder.svg",
+      "assets/img/placeholder.svg",
+      "assets/img/placeholder.svg"
+    ],
+    "stock": 90,
+    "seller": "Nepal Essentials",
+    "location": "Pokhara",
+    "shippingFee": 40,
+    "codAvailable": true,
+    "warranty": "No warranty",
+    "returnDays": 14,
+    "variants": {
+      "color": [
+        "Black",
+        "Tan"
+      ],
+      "size": []
+    },
+    "badges": []
+  },
+  {
+    "id": "P1018",
+    "title": "Polarized Sunglasses",
+    "brand": "Lalitpur Fashion Hub",
+    "category": "Watches & Accessories",
+    "subcategory": "Sunglasses",
+    "price": 999,
+    "oldPrice": 1299,
+    "discountPct": 23,
+    "rating": 4.1,
+    "ratingCount": 77,
+    "images": [
+      "assets/img/placeholder.svg",
+      "assets/img/placeholder.svg",
+      "assets/img/placeholder.svg"
+    ],
+    "stock": 70,
+    "seller": "Lalitpur Fashion Hub",
+    "location": "Lalitpur",
+    "shippingFee": 50,
+    "codAvailable": true,
+    "warranty": "No warranty",
+    "returnDays": 14,
+    "variants": {
+      "color": [
+        "Black"
+      ],
+      "size": []
+    },
+    "badges": [
+      "Trending"
+    ]
+  },
+  {
+    "id": "P1019",
+    "title": "Android Smartphone 6.5 inch",
+    "brand": "Everest Electronics",
+    "category": "Electronic Devices",
+    "subcategory": "Smartphones",
+    "price": 18999,
+    "oldPrice": 21999,
+    "discountPct": 14,
+    "rating": 4.4,
+    "ratingCount": 512,
+    "images": [
+      "assets/img/placeholder.svg",
+      "assets/img/placeholder.svg",
+      "assets/img/placeholder.svg"
+    ],
+    "stock": 25,
+    "seller": "Everest Electronics",
+    "location": "Kathmandu",
+    "shippingFee": 0,
+    "codAvailable": true,
+    "warranty": "1 Year",
+    "returnDays": 7,
+    "variants": {
+      "color": [
+        "Black",
+        "Blue"
+      ],
+      "size": [
+        "64GB",
+        "128GB"
+      ]
+    },
+    "badges": [
+      "DarazMall",
+      "Free Shipping"
+    ]
+  },
+  {
+    "id": "P1020",
+    "title": "Laptop 15.6 inch Core i5",
+    "brand": "Kathmandu Gadgets",
+    "category": "Electronic Devices",
+    "subcategory": "Laptops",
+    "price": 68999,
+    "oldPrice": 74999,
+    "discountPct": 8,
+    "rating": 4.5,
+    "ratingCount": 164,
+    "images": [
+      "assets/img/placeholder.svg",
+      "assets/img/placeholder.svg",
+      "assets/img/placeholder.svg"
+    ],
+    "stock": 8,
+    "seller": "Kathmandu Gadgets",
+    "location": "Kathmandu",
+    "shippingFee": 0,
+    "codAvailable": true,
+    "warranty": "1 Year",
+    "returnDays": 7,
+    "variants": {
+      "color": [
+        "Grey"
+      ],
+      "size": [
+        "8GB/512GB",
+        "16GB/512GB"
+      ]
+    },
+    "badges": [
+      "Top Rated"
+    ]
+  },
+  {
+    "id": "P1021",
+    "title": "10.1 inch Android Tablet",
+    "brand": "Everest Electronics",
+    "category": "Electronic Devices",
+    "subcategory": "Tablets",
+    "price": 13999,
+    "oldPrice": 16999,
+    "discountPct": 18,
+    "rating": 4.1,
+    "ratingCount": 95,
+    "images": [
+      "assets/img/placeholder.svg",
+      "assets/img/placeholder.svg",
+      "assets/img/placeholder.svg"
+    ],
+    "stock": 18,
+    "seller": "Everest Electronics",
+    "location": "Kathmandu",
+    "shippingFee": 80,
+    "codAvailable": true,
+    "warranty": "1 Year",
+    "returnDays": 7,
+    "variants": {
+      "color": [
+        "Silver"
+      ],
+      "size": [
+        "64GB"
+      ]
+    },
+    "badges": []
+  },
+  {
+    "id": "P1022",
+    "title": "Feature Phone Dual SIM",
+    "brand": "Kathmandu Gadgets",
+    "category": "Electronic Devices",
+    "subcategory": "Feature Phones",
+    "price": 2899,
+    "oldPrice": 3499,
+    "discountPct": 17,
+    "rating": 4.0,
+    "ratingCount": 210,
+    "images": [
+      "assets/img/placeholder.svg",
+      "assets/img/placeholder.svg",
+      "assets/img/placeholder.svg"
+    ],
+    "stock": 70,
+    "seller": "Kathmandu Gadgets",
+    "location": "Biratnagar",
+    "shippingFee": 60,
+    "codAvailable": true,
+    "warranty": "6 Months",
+    "returnDays": 7,
+    "variants": {
+      "color": [
+        "Black",
+        "Blue"
+      ],
+      "size": []
+    },
+    "badges": []
+  },
+  {
+    "id": "P1023",
+    "title": "32-inch LED TV",
+    "brand": "Everest Electronics",
+    "category": "TV & Home Appliances",
+    "subcategory": "Televisions",
+    "price": 17999,
+    "oldPrice": 20999,
+    "discountPct": 14,
+    "rating": 4.3,
+    "ratingCount": 128,
+    "images": [
+      "assets/img/placeholder.svg",
+      "assets/img/placeholder.svg",
+      "assets/img/placeholder.svg"
+    ],
+    "stock": 12,
+    "seller": "Everest Electronics",
+    "location": "Kathmandu",
+    "shippingFee": 0,
+    "codAvailable": true,
+    "warranty": "1 Year",
+    "returnDays": 7,
+    "variants": {
+      "color": [
+        "Black"
+      ],
+      "size": []
+    },
+    "badges": [
+      "Free Shipping"
+    ]
+  },
+  {
+    "id": "P1024",
+    "title": "Microwave Oven 20L",
+    "brand": "Pokhara Home Store",
+    "category": "TV & Home Appliances",
+    "subcategory": "Kitchen Appliances",
+    "price": 8999,
+    "oldPrice": 10499,
+    "discountPct": 14,
+    "rating": 4.2,
+    "ratingCount": 84,
+    "images": [
+      "assets/img/placeholder.svg",
+      "assets/img/placeholder.svg",
+      "assets/img/placeholder.svg"
+    ],
+    "stock": 20,
+    "seller": "Pokhara Home Store",
+    "location": "Pokhara",
+    "shippingFee": 120,
+    "codAvailable": true,
+    "warranty": "1 Year",
+    "returnDays": 7,
+    "variants": {
+      "color": [
+        "Silver"
+      ],
+      "size": []
+    },
+    "badges": []
+  },
+  {
+    "id": "P1025",
+    "title": "Air Fryer 4L",
+    "brand": "Pokhara Home Store",
+    "category": "TV & Home Appliances",
+    "subcategory": "Kitchen Appliances",
+    "price": 11999,
+    "oldPrice": 14999,
+    "discountPct": 20,
+    "rating": 4.5,
+    "ratingCount": 142,
+    "images": [
+      "assets/img/placeholder.svg",
+      "assets/img/placeholder.svg",
+      "assets/img/placeholder.svg"
+    ],
+    "stock": 15,
+    "seller": "Pokhara Home Store",
+    "location": "Pokhara",
+    "shippingFee": 0,
+    "codAvailable": true,
+    "warranty": "1 Year",
+    "returnDays": 7,
+    "variants": {
+      "color": [
+        "Black"
+      ],
+      "size": []
+    },
+    "badges": [
+      "Best Seller",
+      "Free Shipping"
+    ]
+  },
+  {
+    "id": "P1026",
+    "title": "Double Door Refrigerator 260L",
+    "brand": "Everest Electronics",
+    "category": "TV & Home Appliances",
+    "subcategory": "Refrigerators",
+    "price": 42999,
+    "oldPrice": 48999,
+    "discountPct": 12,
+    "rating": 4.4,
+    "ratingCount": 67,
+    "images": [
+      "assets/img/placeholder.svg",
+      "assets/img/placeholder.svg",
+      "assets/img/placeholder.svg"
+    ],
+    "stock": 6,
+    "seller": "Everest Electronics",
+    "location": "Kathmandu",
+    "shippingFee": 0,
+    "codAvailable": true,
+    "warranty": "2 Years",
+    "returnDays": 7,
+    "variants": {
+      "color": [
+        "Silver"
+      ],
+      "size": []
+    },
+    "badges": [
+      "DarazMall"
+    ]
+  },
+  {
+    "id": "P1027",
+    "title": "True Wireless Earbuds",
+    "brand": "Kathmandu Gadgets",
+    "category": "Electronic Accessories",
+    "subcategory": "Headphones",
+    "price": 2399,
+    "oldPrice": 2999,
+    "discountPct": 20,
+    "rating": 4.3,
+    "ratingCount": 386,
+    "images": [
+      "assets/img/placeholder.svg",
+      "assets/img/placeholder.svg",
+      "assets/img/placeholder.svg"
+    ],
+    "stock": 55,
+    "seller": "Kathmandu Gadgets",
+    "location": "Kathmandu",
+    "shippingFee": 60,
+    "codAvailable": true,
+    "warranty": "6 Months",
+    "returnDays": 7,
+    "variants": {
+      "color": [
+        "Black",
+        "White"
+      ],
+      "size": []
+    },
+    "badges": [
+      "Top Rated"
+    ]
+  },
+  {
+    "id": "P1028",
+    "title": "Power Bank 10000mAh",
+    "brand": "Kathmandu Gadgets",
+    "category": "Electronic Accessories",
+    "subcategory": "Power Banks",
+    "price": 1299,
+    "oldPrice": 1599,
+    "discountPct": 19,
+    "rating": 4.2,
+    "ratingCount": 441,
+    "images": [
+      "assets/img/placeholder.svg",
+      "assets/img/placeholder.svg",
+      "assets/img/placeholder.svg"
+    ],
+    "stock": 100,
+    "seller": "Kathmandu Gadgets",
+    "location": "Kathmandu",
+    "shippingFee": 50,
+    "codAvailable": true,
+    "warranty": "6 Months",
+    "returnDays": 7,
+    "variants": {
+      "color": [
+        "Black",
+        "Blue"
+      ],
+      "size": []
+    },
+    "badges": [
+      "Best Seller"
+    ]
+  },
+  {
+    "id": "P1029",
+    "title": "USB-C Fast Charging Cable",
+    "brand": "Everest Electronics",
+    "category": "Electronic Accessories",
+    "subcategory": "Cables",
+    "price": 299,
+    "oldPrice": 399,
+    "discountPct": 25,
+    "rating": 4.1,
+    "ratingCount": 293,
+    "images": [
+      "assets/img/placeholder.svg",
+      "assets/img/placeholder.svg",
+      "assets/img/placeholder.svg"
+    ],
+    "stock": 200,
+    "seller": "Everest Electronics",
+    "location": "Lalitpur",
+    "shippingFee": 40,
+    "codAvailable": true,
+    "warranty": "No warranty",
+    "returnDays": 7,
+    "variants": {
+      "color": [
+        "Black",
+        "White"
+      ],
+      "size": [
+        "1m",
+        "2m"
+      ]
+    },
+    "badges": []
+  },
+  {
+    "id": "P1030",
+    "title": "Wireless Mouse",
+    "brand": "Kathmandu Gadgets",
+    "category": "Electronic Accessories",
+    "subcategory": "Computer Accessories",
+    "price": 799,
+    "oldPrice": 999,
+    "discountPct": 20,
+    "rating": 4.2,
+    "ratingCount": 182,
+    "images": [
+      "assets/img/placeholder.svg",
+      "assets/img/placeholder.svg",
+      "assets/img/placeholder.svg"
+    ],
+    "stock": 130,
+    "seller": "Kathmandu Gadgets",
+    "location": "Kathmandu",
+    "shippingFee": 50,
+    "codAvailable": true,
+    "warranty": "6 Months",
+    "returnDays": 7,
+    "variants": {
+      "color": [
+        "Black"
+      ],
+      "size": []
+    },
+    "badges": []
+  },
+  {
+    "id": "P1031",
+    "title": "Mechanical Keyboard",
+    "brand": "Kathmandu Gadgets",
+    "category": "Electronic Accessories",
+    "subcategory": "Computer Accessories",
+    "price": 3499,
+    "oldPrice": 3999,
+    "discountPct": 13,
+    "rating": 4.4,
+    "ratingCount": 76,
+    "images": [
+      "assets/img/placeholder.svg",
+      "assets/img/placeholder.svg",
+      "assets/img/placeholder.svg"
+    ],
+    "stock": 35,
+    "seller": "Kathmandu Gadgets",
+    "location": "Kathmandu",
+    "shippingFee": 80,
+    "codAvailable": true,
+    "warranty": "6 Months",
+    "returnDays": 7,
+    "variants": {
+      "color": [
+        "Black"
+      ],
+      "size": [
+        "Blue Switch",
+        "Red Switch"
+      ]
+    },
+    "badges": [
+      "Trending"
+    ]
+  },
+  {
+    "id": "P1032",
+    "title": "Organic Masala Tea 500g",
+    "brand": "Nepal Essentials",
+    "category": "Groceries & Pets",
+    "subcategory": "Beverages",
+    "price": 599,
+    "oldPrice": 749,
+    "discountPct": 20,
+    "rating": 4.5,
+    "ratingCount": 154,
+    "images": [
+      "assets/img/placeholder.svg",
+      "assets/img/placeholder.svg",
+      "assets/img/placeholder.svg"
+    ],
+    "stock": 120,
+    "seller": "Nepal Essentials",
+    "location": "Ilam",
+    "shippingFee": 40,
+    "codAvailable": true,
+    "warranty": "No warranty",
+    "returnDays": 7,
+    "variants": {
+      "color": [],
+      "size": [
+        "500g"
+      ]
+    },
+    "badges": [
+      "Free Shipping"
+    ]
+  },
+  {
+    "id": "P1033",
+    "title": "Basmati Rice 5kg",
+    "brand": "Nepal Essentials",
+    "category": "Groceries & Pets",
+    "subcategory": "Rice & Staples",
+    "price": 1499,
+    "oldPrice": 1699,
+    "discountPct": 12,
+    "rating": 4.3,
+    "ratingCount": 98,
+    "images": [
+      "assets/img/placeholder.svg",
+      "assets/img/placeholder.svg",
+      "assets/img/placeholder.svg"
+    ],
+    "stock": 60,
+    "seller": "Nepal Essentials",
+    "location": "Birgunj",
+    "shippingFee": 80,
+    "codAvailable": true,
+    "warranty": "No warranty",
+    "returnDays": 7,
+    "variants": {
+      "color": [],
+      "size": [
+        "5kg"
+      ]
+    },
+    "badges": []
+  },
+  {
+    "id": "P1034",
+    "title": "Dog Food Chicken 2kg",
+    "brand": "Biratnagar Mart",
+    "category": "Groceries & Pets",
+    "subcategory": "Pet Food",
+    "price": 1099,
+    "oldPrice": 1399,
+    "discountPct": 21,
+    "rating": 4.2,
+    "ratingCount": 55,
+    "images": [
+      "assets/img/placeholder.svg",
+      "assets/img/placeholder.svg",
+      "assets/img/placeholder.svg"
+    ],
+    "stock": 30,
+    "seller": "Biratnagar Mart",
+    "location": "Biratnagar",
+    "shippingFee": 90,
+    "codAvailable": true,
+    "warranty": "No warranty",
+    "returnDays": 7,
+    "variants": {
+      "color": [],
+      "size": [
+        "2kg"
+      ]
+    },
+    "badges": []
+  },
+  {
+    "id": "P1035",
+    "title": "Cat Litter 5L",
+    "brand": "Biratnagar Mart",
+    "category": "Groceries & Pets",
+    "subcategory": "Cleaning",
+    "price": 899,
+    "oldPrice": 1099,
+    "discountPct": 18,
+    "rating": 4.0,
+    "ratingCount": 41,
+    "images": [
+      "assets/img/placeholder.svg",
+      "assets/img/placeholder.svg",
+      "assets/img/placeholder.svg"
+    ],
+    "stock": 25,
+    "seller": "Biratnagar Mart",
+    "location": "Biratnagar",
+    "shippingFee": 90,
+    "codAvailable": true,
+    "warranty": "No warranty",
+    "returnDays": 7,
+    "variants": {
+      "color": [],
+      "size": [
+        "5L"
+      ]
+    },
+    "badges": []
+  },
+  {
+    "id": "P1036",
+    "title": "Baby Diaper Jumbo Pack",
+    "brand": "Daraz Mall Official",
+    "category": "Babies & Toys",
+    "subcategory": "Diapers",
+    "price": 1499,
+    "oldPrice": 1799,
+    "discountPct": 17,
+    "rating": 4.6,
+    "ratingCount": 233,
+    "images": [
+      "assets/img/placeholder.svg",
+      "assets/img/placeholder.svg",
+      "assets/img/placeholder.svg"
+    ],
+    "stock": 70,
+    "seller": "Daraz Mall Official",
+    "location": "Kathmandu",
+    "shippingFee": 0,
+    "codAvailable": true,
+    "warranty": "No warranty",
+    "returnDays": 7,
+    "variants": {
+      "color": [],
+      "size": [
+        "M",
+        "L"
+      ]
+    },
+    "badges": [
+      "Best Seller",
+      "Free Shipping"
+    ]
+  },
+  {
+    "id": "P1037",
+    "title": "Baby Lotion 200ml",
+    "brand": "Daraz Mall Official",
+    "category": "Babies & Toys",
+    "subcategory": "Baby Care",
+    "price": 549,
+    "oldPrice": 699,
+    "discountPct": 21,
+    "rating": 4.4,
+    "ratingCount": 111,
+    "images": [
+      "assets/img/placeholder.svg",
+      "assets/img/placeholder.svg",
+      "assets/img/placeholder.svg"
+    ],
+    "stock": 85,
+    "seller": "Daraz Mall Official",
+    "location": "Kathmandu",
+    "shippingFee": 0,
+    "codAvailable": true,
+    "warranty": "No warranty",
+    "returnDays": 7,
+    "variants": {
+      "color": [],
+      "size": [
+        "200ml"
+      ]
+    },
+    "badges": []
+  },
+  {
+    "id": "P1038",
+    "title": "Building Blocks 120 pcs",
+    "brand": "Nepal Essentials",
+    "category": "Babies & Toys",
+    "subcategory": "Toys",
+    "price": 1299,
+    "oldPrice": 1599,
+    "discountPct": 19,
+    "rating": 4.5,
+    "ratingCount": 88,
+    "images": [
+      "assets/img/placeholder.svg",
+      "assets/img/placeholder.svg",
+      "assets/img/placeholder.svg"
+    ],
+    "stock": 40,
+    "seller": "Nepal Essentials",
+    "location": "Pokhara",
+    "shippingFee": 60,
+    "codAvailable": true,
+    "warranty": "No warranty",
+    "returnDays": 14,
+    "variants": {
+      "color": [],
+      "size": []
+    },
+    "badges": [
+      "Top Rated"
+    ]
+  },
+  {
+    "id": "P1039",
+    "title": "Kids Remote Control Car",
+    "brand": "Nepal Essentials",
+    "category": "Babies & Toys",
+    "subcategory": "Toys",
+    "price": 1799,
+    "oldPrice": 2199,
+    "discountPct": 18,
+    "rating": 4.1,
+    "ratingCount": 73,
+    "images": [
+      "assets/img/placeholder.svg",
+      "assets/img/placeholder.svg",
+      "assets/img/placeholder.svg"
+    ],
+    "stock": 25,
+    "seller": "Nepal Essentials",
+    "location": "Kathmandu",
+    "shippingFee": 70,
+    "codAvailable": true,
+    "warranty": "No warranty",
+    "returnDays": 14,
+    "variants": {
+      "color": [
+        "Red",
+        "Blue"
+      ],
+      "size": []
+    },
+    "badges": []
+  },
+  {
+    "id": "P1040",
+    "title": "Bedsheet Set Queen Size",
+    "brand": "Pokhara Home Store",
+    "category": "Home & Lifestyle",
+    "subcategory": "Bedding",
+    "price": 1899,
+    "oldPrice": 2399,
+    "discountPct": 21,
+    "rating": 4.3,
+    "ratingCount": 67,
+    "images": [
+      "assets/img/placeholder.svg",
+      "assets/img/placeholder.svg",
+      "assets/img/placeholder.svg"
+    ],
+    "stock": 55,
+    "seller": "Pokhara Home Store",
+    "location": "Pokhara",
+    "shippingFee": 80,
+    "codAvailable": true,
+    "warranty": "No warranty",
+    "returnDays": 7,
+    "variants": {
+      "color": [
+        "Grey",
+        "Blue"
+      ],
+      "size": []
+    },
+    "badges": []
+  },
+  {
+    "id": "P1041",
+    "title": "Non-stick Cookware 7 pcs",
+    "brand": "Pokhara Home Store",
+    "category": "Home & Lifestyle",
+    "subcategory": "Kitchen & Dining",
+    "price": 2999,
+    "oldPrice": 3699,
+    "discountPct": 19,
+    "rating": 4.4,
+    "ratingCount": 105,
+    "images": [
+      "assets/img/placeholder.svg",
+      "assets/img/placeholder.svg",
+      "assets/img/placeholder.svg"
+    ],
+    "stock": 22,
+    "seller": "Pokhara Home Store",
+    "location": "Pokhara",
+    "shippingFee": 0,
+    "codAvailable": true,
+    "warranty": "1 Year",
+    "returnDays": 7,
+    "variants": {
+      "color": [
+        "Black"
+      ],
+      "size": []
+    },
+    "badges": [
+      "Free Shipping"
+    ]
+  },
+  {
+    "id": "P1042",
+    "title": "LED Desk Lamp",
+    "brand": "Nepal Essentials",
+    "category": "Home & Lifestyle",
+    "subcategory": "Lighting",
+    "price": 1199,
+    "oldPrice": 1499,
+    "discountPct": 20,
+    "rating": 4.2,
+    "ratingCount": 64,
+    "images": [
+      "assets/img/placeholder.svg",
+      "assets/img/placeholder.svg",
+      "assets/img/placeholder.svg"
+    ],
+    "stock": 48,
+    "seller": "Nepal Essentials",
+    "location": "Kathmandu",
+    "shippingFee": 60,
+    "codAvailable": true,
+    "warranty": "No warranty",
+    "returnDays": 7,
+    "variants": {
+      "color": [
+        "White",
+        "Black"
+      ],
+      "size": []
+    },
+    "badges": []
+  },
+  {
+    "id": "P1043",
+    "title": "Wall Clock Classic",
+    "brand": "Nepal Essentials",
+    "category": "Home & Lifestyle",
+    "subcategory": "Home Decor",
+    "price": 899,
+    "oldPrice": 1099,
+    "discountPct": 18,
+    "rating": 4.1,
+    "ratingCount": 52,
+    "images": [
+      "assets/img/placeholder.svg",
+      "assets/img/placeholder.svg",
+      "assets/img/placeholder.svg"
+    ],
+    "stock": 90,
+    "seller": "Nepal Essentials",
+    "location": "Lalitpur",
+    "shippingFee": 40,
+    "codAvailable": true,
+    "warranty": "No warranty",
+    "returnDays": 7,
+    "variants": {
+      "color": [
+        "Black"
+      ],
+      "size": []
+    },
+    "badges": []
+  },
+  {
+    "id": "P1044",
+    "title": "Insulated Water Bottle 1L",
+    "brand": "Nepal Essentials",
+    "category": "Home & Lifestyle",
+    "subcategory": "Kitchen & Dining",
+    "price": 999,
+    "oldPrice": 1299,
+    "discountPct": 23,
+    "rating": 4.4,
+    "ratingCount": 81,
+    "images": [
+      "assets/img/placeholder.svg",
+      "assets/img/placeholder.svg",
+      "assets/img/placeholder.svg"
+    ],
+    "stock": 110,
+    "seller": "Nepal Essentials",
+    "location": "Kathmandu",
+    "shippingFee": 50,
+    "codAvailable": true,
+    "warranty": "No warranty",
+    "returnDays": 7,
+    "variants": {
+      "color": [
+        "Blue",
+        "Black"
+      ],
+      "size": [
+        "1L"
+      ]
+    },
+    "badges": [
+      "Trending"
+    ]
+  },
+  {
+    "id": "P1045",
+    "title": "Yoga Mat 6mm",
+    "brand": "Nepal Essentials",
+    "category": "Sports & Outdoor",
+    "subcategory": "Fitness",
+    "price": 1199,
+    "oldPrice": 1499,
+    "discountPct": 20,
+    "rating": 4.5,
+    "ratingCount": 98,
+    "images": [
+      "assets/img/placeholder.svg",
+      "assets/img/placeholder.svg",
+      "assets/img/placeholder.svg"
+    ],
+    "stock": 60,
+    "seller": "Nepal Essentials",
+    "location": "Kathmandu",
+    "shippingFee": 60,
+    "codAvailable": true,
+    "warranty": "No warranty",
+    "returnDays": 7,
+    "variants": {
+      "color": [
+        "Purple",
+        "Green"
+      ],
+      "size": []
+    },
+    "badges": [
+      "Best Seller"
+    ]
+  },
+  {
+    "id": "P1046",
+    "title": "Trekking Backpack 50L",
+    "brand": "Nepal Essentials",
+    "category": "Sports & Outdoor",
+    "subcategory": "Outdoor",
+    "price": 3499,
+    "oldPrice": 3999,
+    "discountPct": 13,
+    "rating": 4.3,
+    "ratingCount": 74,
+    "images": [
+      "assets/img/placeholder.svg",
+      "assets/img/placeholder.svg",
+      "assets/img/placeholder.svg"
+    ],
+    "stock": 28,
+    "seller": "Nepal Essentials",
+    "location": "Pokhara",
+    "shippingFee": 90,
+    "codAvailable": true,
+    "warranty": "No warranty",
+    "returnDays": 14,
+    "variants": {
+      "color": [
+        "Black",
+        "Orange"
+      ],
+      "size": []
+    },
+    "badges": []
+  },
+  {
+    "id": "P1047",
+    "title": "Car Vacuum Cleaner",
+    "brand": "Kathmandu Gadgets",
+    "category": "Motors/Tools/DIY",
+    "subcategory": "Car Accessories",
+    "price": 1599,
+    "oldPrice": 1999,
+    "discountPct": 20,
+    "rating": 4.2,
+    "ratingCount": 69,
+    "images": [
+      "assets/img/placeholder.svg",
+      "assets/img/placeholder.svg",
+      "assets/img/placeholder.svg"
+    ],
+    "stock": 33,
+    "seller": "Kathmandu Gadgets",
+    "location": "Kathmandu",
+    "shippingFee": 80,
+    "codAvailable": true,
+    "warranty": "6 Months",
+    "returnDays": 7,
+    "variants": {
+      "color": [
+        "Black"
+      ],
+      "size": []
+    },
+    "badges": []
+  },
+  {
+    "id": "P1048",
+    "title": "Tool Kit 32 pcs",
+    "brand": "Biratnagar Mart",
+    "category": "Motors/Tools/DIY",
+    "subcategory": "Tools",
+    "price": 2199,
+    "oldPrice": 2699,
+    "discountPct": 19,
+    "rating": 4.1,
+    "ratingCount": 41,
+    "images": [
+      "assets/img/placeholder.svg",
+      "assets/img/placeholder.svg",
+      "assets/img/placeholder.svg"
+    ],
+    "stock": 20,
+    "seller": "Biratnagar Mart",
+    "location": "Biratnagar",
+    "shippingFee": 100,
+    "codAvailable": true,
+    "warranty": "6 Months",
+    "returnDays": 7,
+    "variants": {
+      "color": [
+        "Black"
+      ],
+      "size": []
+    },
+    "badges": []
+  }
+]

@@ -1,0 +1,50 @@
+[
+  {
+    "name": "Daraz Mall Official",
+    "ratingPct": 97,
+    "shipOnTimePct": 96,
+    "chatResponsePct": 95
+  },
+  {
+    "name": "Kathmandu Gadgets",
+    "ratingPct": 95,
+    "shipOnTimePct": 92,
+    "chatResponsePct": 90
+  },
+  {
+    "name": "Himalayan Style",
+    "ratingPct": 96,
+    "shipOnTimePct": 94,
+    "chatResponsePct": 92
+  },
+  {
+    "name": "Everest Electronics",
+    "ratingPct": 94,
+    "shipOnTimePct": 93,
+    "chatResponsePct": 88
+  },
+  {
+    "name": "Pokhara Home Store",
+    "ratingPct": 92,
+    "shipOnTimePct": 90,
+    "chatResponsePct": 85
+  },
+  {
+    "name": "Nepal Essentials",
+    "ratingPct": 93,
+    "shipOnTimePct": 91,
+    "chatResponsePct": 86
+  },
+  {
+    "name": "Lalitpur Fashion Hub",
+    "ratingPct": 90,
+    "shipOnTimePct": 89,
+    "chatResponsePct": 80
+  },
+  {
+    "name": "Biratnagar Mart",
+    "ratingPct": 91,
+    "shipOnTimePct": 88,
+    "chatResponsePct": 82
+  }
+]

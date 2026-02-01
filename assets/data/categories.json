@@ -1,0 +1,111 @@
+[
+  {
+    "name": "Women's Fashion",
+    "subcategories": [
+      "Kurtas",
+      "Dresses",
+      "Tops",
+      "Jeans",
+      "Handbags"
+    ]
+  },
+  {
+    "name": "Health & Beauty",
+    "subcategories": [
+      "Skin Care",
+      "Hair Care",
+      "Personal Care",
+      "Makeup"
+    ]
+  },
+  {
+    "name": "Men's Fashion",
+    "subcategories": [
+      "T-Shirts",
+      "Shirts",
+      "Jeans",
+      "Shoes"
+    ]
+  },
+  {
+    "name": "Watches & Accessories",
+    "subcategories": [
+      "Watches",
+      "Bags",
+      "Sunglasses",
+      "Wallets"
+    ]
+  },
+  {
+    "name": "Electronic Devices",
+    "subcategories": [
+      "Smartphones",
+      "Laptops",
+      "Tablets",
+      "Feature Phones"
+    ]
+  },
+  {
+    "name": "TV & Home Appliances",
+    "subcategories": [
+      "Televisions",
+      "Kitchen Appliances",
+      "Air Conditioners",
+      "Refrigerators"
+    ]
+  },
+  {
+    "name": "Electronic Accessories",
+    "subcategories": [
+      "Headphones",
+      "Power Banks",
+      "Cables",
+      "Computer Accessories"
+    ]
+  },
+  {
+    "name": "Groceries & Pets",
+    "subcategories": [
+      "Beverages",
+      "Rice & Staples",
+      "Pet Food",
+      "Cleaning"
+    ]
+  },
+  {
+    "name": "Babies & Toys",
+    "subcategories": [
+      "Diapers",
+      "Baby Care",
+      "Toys",
+      "Learning"
+    ]
+  },
+  {
+    "name": "Home & Lifestyle",
+    "subcategories": [
+      "Home Decor",
+      "Kitchen & Dining",
+      "Bedding",
+      "Lighting"
+    ]
+  },
+  {
+    "name": "Sports & Outdoor",
+    "subcategories": [
+      "Fitness",
+      "Outdoor",
+      "Team Sports",
+      "Cycling"
+    ]
+  },
+  {
+    "name": "Motors/Tools/DIY",
+    "subcategories": [
+      "Car Accessories",
+      "Tools",
+      "Motorbike",
+      "DIY"
+    ]
+  }
+]
