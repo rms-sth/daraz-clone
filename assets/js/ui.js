@@ -1,101 +1,9 @@
-/* global $ */
-
 /* global $, bootstrap */
 
 const UI = (() => {
   const formatNPR = (amount) => {
     if (amount === null || amount === undefined) return '';
     return `NPR ${Number(amount).toLocaleString('en-NP')}`;
-  };
-
-  const calcDiscount = (oldPrice, newPrice) => {
-    if (!oldPrice || !newPrice || oldPrice <= newPrice) return 0;
-    return Math.round(((oldPrice - newPrice) / oldPrice) * 100);
-  };
-
-  const starsHTML = (rating = 0) => {
-    const full = Math.floor(rating);
-    const half = rating - full >= 0.5;
-    let html = '';
-    for (let i = 0; i < 5; i += 1) {
-      if (i < full) {
-        html += '<i class="fa-solid fa-star text-warning"></i>';
-      } else if (i === full && half) {
-        html += '<i class="fa-solid fa-star-half-stroke text-warning"></i>';
-      } else {
-        html += '<i class="fa-regular fa-star text-warning"></i>';
-      }
-    }
-    return html;
-  };
-
-  const renderTemplate = (templateString, data) => {
-    if (!templateString) return '';
-
-    const renderBlock = (tpl, scope) => tpl.replace(/{{\s*([^}\s]+)\s*}}/g, (_, key) => {
-      const value = scope[key];
-      return value === undefined || value === null ? '' : value;
-    });
-
-    const renderRawBlock = (tpl, scope) => tpl.replace(/{{{\s*([^}\s]+)\s*}}}/g, (_, key) => {
-      const value = scope[key];
-      return value === undefined || value === null ? '' : value;
-    });
-
-    const loopRegex = /{{#each\s+([\w.]+)}}([\s\S]*?){{\/each}}/g;
-
-    const renderWithLoops = (tpl, scope) => tpl.replace(loopRegex, (_, listKey, inner) => {
-      const list = listKey.split('.').reduce((acc, part) => (acc ? acc[part] : undefined), scope);
-      if (!Array.isArray(list)) return '';
-      return list
-        .map((item, index) => {
-          const loopScope = { ...scope, ...item, _index: index };
-          const withRaw = renderRawBlock(inner, loopScope);
-          return renderBlock(withRaw, loopScope);
-        })
-        .join('');
-    });
-
-    const withLoops = renderWithLoops(templateString, data);
-    const withRaw = renderRawBlock(withLoops, data);
-    return renderBlock(withRaw, data);
-  };
-
-  const skeletonGrid = (count = 8) => {
-    let html = '<div class="row g-3">';
-    for (let i = 0; i < count; i += 1) {
-      html += `
-        <div class="col-6 col-md-4 col-lg-3">
-          <div class="card">
-            <div class="ratio ratio-1x1 bg-light placeholder-glow"></div>
-            <div class="card-body">
-              <div class="placeholder col-10"></div>
-              <div class="placeholder col-6"></div>
-            </div>
-          </div>
-        </div>
-      `;
-    }
-    html += '</div>';
-    return html;
-  };
-
-  const skeletonList = (count = 4) => {
-    let html = '';
-    for (let i = 0; i < count; i += 1) {
-      html += `
-        <div class="card mb-3">
-          <div class="card-body">
-            <div class="placeholder-glow">
-              <span class="placeholder col-7"></span>
-              <span class="placeholder col-4"></span>
-              <span class="placeholder col-6"></span>
-            </div>
-          </div>
-        </div>
-      `;
-    }
-    return html;
   };
 
   const ensureConfirmModal = () => {
@@ -137,26 +45,6 @@ const UI = (() => {
     instance.show();
   };
 
-  const validateRequired = (formEl) => {
-    const $form = $(formEl);
-    let valid = true;
-    $form.find('[required]').each(function () {
-      const value = $(this).val();
-      const isEmpty = value === null || value === undefined || value.toString().trim() === '';
-      if (isEmpty) {
-        $(this).addClass('is-invalid').attr('aria-invalid', 'true');
-        valid = false;
-      } else {
-        $(this).removeClass('is-invalid').removeAttr('aria-invalid');
-      }
-    });
-    return valid;
-  };
-
-  const clearValidation = (formEl) => {
-    $(formEl).find('.is-invalid').removeClass('is-invalid').removeAttr('aria-invalid');
-  };
-
   const showToast = (message, type = 'primary') => {
     const toastId = `toast-${Date.now()}`;
     const toast = `
@@ -179,14 +67,7 @@ const UI = (() => {
 
   return {
     formatNPR,
-    calcDiscount,
-    starsHTML,
-    renderTemplate,
-    skeletonGrid,
-    skeletonList,
     confirm,
-    validateRequired,
-    clearValidation,
     showToast,
   };
 })();
