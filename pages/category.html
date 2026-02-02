@@ -17,7 +17,7 @@
         <nav aria-label="breadcrumb">
           <ol class="breadcrumb">
             <li class="breadcrumb-item"><a href="home.html">Home</a></li>
-            <li class="breadcrumb-item active" id="breadcrumb-category" aria-current="page">Category</li>
+            <li class="breadcrumb-item active" id="breadcrumb-category" aria-current="page">All Products</li>
           </ol>
         </nav>
 
@@ -35,7 +35,36 @@
                 </div>
                 <div class="mb-3">
                   <label class="form-label">Brand</label>
-                  <div id="brandFilters" class="filter-list"></div>
+                  <div id="brandFilters" class="filter-list">
+                    <div class="form-check">
+                      <input class="form-check-input brand-filter" type="checkbox" value="Himalayan Style" id="brand-himalayan-style" />
+                      <label class="form-check-label" for="brand-himalayan-style">Himalayan Style</label>
+                    </div>
+                    <div class="form-check">
+                      <input class="form-check-input brand-filter" type="checkbox" value="Lalitpur Fashion Hub" id="brand-lalitpur-fashion-hub" />
+                      <label class="form-check-label" for="brand-lalitpur-fashion-hub">Lalitpur Fashion Hub</label>
+                    </div>
+                    <div class="form-check">
+                      <input class="form-check-input brand-filter" type="checkbox" value="Daraz Mall Official" id="brand-daraz-mall" />
+                      <label class="form-check-label" for="brand-daraz-mall">Daraz Mall Official</label>
+                    </div>
+                    <div class="form-check">
+                      <input class="form-check-input brand-filter" type="checkbox" value="Kathmandu Gadgets" id="brand-kathmandu-gadgets" />
+                      <label class="form-check-label" for="brand-kathmandu-gadgets">Kathmandu Gadgets</label>
+                    </div>
+                    <div class="form-check">
+                      <input class="form-check-input brand-filter" type="checkbox" value="Everest Electronics" id="brand-everest-electronics" />
+                      <label class="form-check-label" for="brand-everest-electronics">Everest Electronics</label>
+                    </div>
+                    <div class="form-check">
+                      <input class="form-check-input brand-filter" type="checkbox" value="Pokhara Home Store" id="brand-pokhara-home" />
+                      <label class="form-check-label" for="brand-pokhara-home">Pokhara Home Store</label>
+                    </div>
+                    <div class="form-check">
+                      <input class="form-check-input brand-filter" type="checkbox" value="Nepal Essentials" id="brand-nepal-essentials" />
+                      <label class="form-check-label" for="brand-nepal-essentials">Nepal Essentials</label>
+                    </div>
+                  </div>
                 </div>
                 <div class="mb-3">
                   <label class="form-label">Rating</label>
@@ -76,7 +105,7 @@
           <section class="col-lg-9">
             <div class="d-flex flex-wrap align-items-center justify-content-between gap-2 mb-3">
               <div>
-                <h1 class="h5 mb-1" id="category-title">Category</h1>
+                <h1 class="h5 mb-1" id="category-title">All Products</h1>
                 <div class="text-muted small"><span id="result-count">0</span> items found</div>
               </div>
               <div class="d-flex align-items-center gap-2">
@@ -90,10 +119,433 @@
               </div>
             </div>
 
-            <div id="product-grid" class="row g-3"></div>
+            <div id="product-grid" class="row g-3">
+              <div class="col-6 col-md-4 product-item" data-id="P1001" data-title="Women's Floral Kurta Set" data-category="Women's Fashion" data-subcategory="Kurtas" data-brand="Himalayan Style" data-price="1899" data-rating="4.6" data-stock="58" data-location="Kathmandu">
+                <div class="card product-card h-100">
+                  <div class="product-thumb position-relative ratio ratio-1x1">
+                    <a href="product.html?id=P1001" class="product-link">
+                      <img src="../assets/img/placeholder.svg" alt="Women's Floral Kurta Set" class="img-fluid" />
+                    </a>
+                    <button class="btn btn-sm btn-light wishlist-btn" data-id="P1001" aria-label="Toggle wishlist">
+                      <i class="fa-solid fa-heart"></i>
+                    </button>
+                  </div>
+                  <div class="card-body">
+                    <h3 class="product-title mb-2">Women's Floral Kurta Set</h3>
+                    <div class="price-row">
+                      <span class="price">NPR 1,899</span>
+                      <span class="old-price">NPR 2,499</span>
+                      <span class="discount">-24%</span>
+                    </div>
+                    <div class="rating-row small">
+                      <i class="fa-solid fa-star text-warning"></i>
+                      <i class="fa-solid fa-star text-warning"></i>
+                      <i class="fa-solid fa-star text-warning"></i>
+                      <i class="fa-solid fa-star text-warning"></i>
+                      <i class="fa-regular fa-star text-warning"></i>
+                      <span class="text-muted ms-1">(214)</span>
+                    </div>
+                  </div>
+                  <div class="card-footer bg-white border-0">
+                    <button class="btn btn-outline-dark btn-sm w-100 btn-add-cart">Add to Cart</button>
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-6 col-md-4 product-item" data-id="P1002" data-title="Satin Maxi Dress" data-category="Women's Fashion" data-subcategory="Dresses" data-brand="Lalitpur Fashion Hub" data-price="2299" data-rating="4.4" data-stock="32" data-location="Lalitpur">
+                <div class="card product-card h-100">
+                  <div class="product-thumb position-relative ratio ratio-1x1">
+                    <a href="product.html?id=P1002" class="product-link">
+                      <img src="../assets/img/placeholder.svg" alt="Satin Maxi Dress" class="img-fluid" />
+                    </a>
+                    <button class="btn btn-sm btn-light wishlist-btn" data-id="P1002" aria-label="Toggle wishlist">
+                      <i class="fa-solid fa-heart"></i>
+                    </button>
+                  </div>
+                  <div class="card-body">
+                    <h3 class="product-title mb-2">Satin Maxi Dress</h3>
+                    <div class="price-row">
+                      <span class="price">NPR 2,299</span>
+                      <span class="old-price">NPR 2,999</span>
+                      <span class="discount">-23%</span>
+                    </div>
+                    <div class="rating-row small">
+                      <i class="fa-solid fa-star text-warning"></i>
+                      <i class="fa-solid fa-star text-warning"></i>
+                      <i class="fa-solid fa-star text-warning"></i>
+                      <i class="fa-regular fa-star text-warning"></i>
+                      <i class="fa-regular fa-star text-warning"></i>
+                      <span class="text-muted ms-1">(96)</span>
+                    </div>
+                  </div>
+                  <div class="card-footer bg-white border-0">
+                    <button class="btn btn-outline-dark btn-sm w-100 btn-add-cart">Add to Cart</button>
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-6 col-md-4 product-item" data-id="P1007" data-title="Vitamin C Serum 30ml" data-category="Health & Beauty" data-subcategory="Skin Care" data-brand="Daraz Mall Official" data-price="1299" data-rating="4.7" data-stock="60" data-location="Kathmandu">
+                <div class="card product-card h-100">
+                  <div class="product-thumb position-relative ratio ratio-1x1">
+                    <a href="product.html?id=P1007" class="product-link">
+                      <img src="../assets/img/placeholder.svg" alt="Vitamin C Serum" class="img-fluid" />
+                    </a>
+                    <button class="btn btn-sm btn-light wishlist-btn" data-id="P1007" aria-label="Toggle wishlist">
+                      <i class="fa-solid fa-heart"></i>
+                    </button>
+                  </div>
+                  <div class="card-body">
+                    <h3 class="product-title mb-2">Vitamin C Serum 30ml</h3>
+                    <div class="price-row">
+                      <span class="price">NPR 1,299</span>
+                      <span class="old-price">NPR 1,799</span>
+                      <span class="discount">-28%</span>
+                    </div>
+                    <div class="rating-row small">
+                      <i class="fa-solid fa-star text-warning"></i>
+                      <i class="fa-solid fa-star text-warning"></i>
+                      <i class="fa-solid fa-star text-warning"></i>
+                      <i class="fa-solid fa-star text-warning"></i>
+                      <i class="fa-solid fa-star-half-stroke text-warning"></i>
+                      <span class="text-muted ms-1">(322)</span>
+                    </div>
+                  </div>
+                  <div class="card-footer bg-white border-0">
+                    <button class="btn btn-outline-dark btn-sm w-100 btn-add-cart">Add to Cart</button>
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-6 col-md-4 product-item" data-id="P1011" data-title="Men's Cotton Polo" data-category="Men's Fashion" data-subcategory="T-Shirts" data-brand="Himalayan Style" data-price="1099" data-rating="4.2" data-stock="85" data-location="Kathmandu">
+                <div class="card product-card h-100">
+                  <div class="product-thumb position-relative ratio ratio-1x1">
+                    <a href="product.html?id=P1011" class="product-link">
+                      <img src="../assets/img/placeholder.svg" alt="Men's Cotton Polo" class="img-fluid" />
+                    </a>
+                    <button class="btn btn-sm btn-light wishlist-btn" data-id="P1011" aria-label="Toggle wishlist">
+                      <i class="fa-solid fa-heart"></i>
+                    </button>
+                  </div>
+                  <div class="card-body">
+                    <h3 class="product-title mb-2">Men's Cotton Polo</h3>
+                    <div class="price-row">
+                      <span class="price">NPR 1,099</span>
+                      <span class="old-price">NPR 1,399</span>
+                      <span class="discount">-21%</span>
+                    </div>
+                    <div class="rating-row small">
+                      <i class="fa-solid fa-star text-warning"></i>
+                      <i class="fa-solid fa-star text-warning"></i>
+                      <i class="fa-solid fa-star text-warning"></i>
+                      <i class="fa-regular fa-star text-warning"></i>
+                      <i class="fa-regular fa-star text-warning"></i>
+                      <span class="text-muted ms-1">(189)</span>
+                    </div>
+                  </div>
+                  <div class="card-footer bg-white border-0">
+                    <button class="btn btn-outline-dark btn-sm w-100 btn-add-cart">Add to Cart</button>
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-6 col-md-4 product-item" data-id="P1014" data-title="Lightweight Running Shoes" data-category="Men's Fashion" data-subcategory="Shoes" data-brand="Himalayan Style" data-price="2599" data-rating="4.5" data-stock="30" data-location="Kathmandu">
+                <div class="card product-card h-100">
+                  <div class="product-thumb position-relative ratio ratio-1x1">
+                    <a href="product.html?id=P1014" class="product-link">
+                      <img src="../assets/img/placeholder.svg" alt="Running Shoes" class="img-fluid" />
+                    </a>
+                    <button class="btn btn-sm btn-light wishlist-btn" data-id="P1014" aria-label="Toggle wishlist">
+                      <i class="fa-solid fa-heart"></i>
+                    </button>
+                  </div>
+                  <div class="card-body">
+                    <h3 class="product-title mb-2">Lightweight Running Shoes</h3>
+                    <div class="price-row">
+                      <span class="price">NPR 2,599</span>
+                      <span class="old-price">NPR 3,299</span>
+                      <span class="discount">-21%</span>
+                    </div>
+                    <div class="rating-row small">
+                      <i class="fa-solid fa-star text-warning"></i>
+                      <i class="fa-solid fa-star text-warning"></i>
+                      <i class="fa-solid fa-star text-warning"></i>
+                      <i class="fa-solid fa-star text-warning"></i>
+                      <i class="fa-regular fa-star text-warning"></i>
+                      <span class="text-muted ms-1">(205)</span>
+                    </div>
+                  </div>
+                  <div class="card-footer bg-white border-0">
+                    <button class="btn btn-outline-dark btn-sm w-100 btn-add-cart">Add to Cart</button>
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-6 col-md-4 product-item" data-id="P1019" data-title="Android Smartphone 6.5 inch" data-category="Electronic Devices" data-subcategory="Smartphones" data-brand="Everest Electronics" data-price="18999" data-rating="4.4" data-stock="25" data-location="Kathmandu">
+                <div class="card product-card h-100">
+                  <div class="product-thumb position-relative ratio ratio-1x1">
+                    <a href="product.html?id=P1019" class="product-link">
+                      <img src="../assets/img/placeholder.svg" alt="Android Smartphone" class="img-fluid" />
+                    </a>
+                    <button class="btn btn-sm btn-light wishlist-btn" data-id="P1019" aria-label="Toggle wishlist">
+                      <i class="fa-solid fa-heart"></i>
+                    </button>
+                  </div>
+                  <div class="card-body">
+                    <h3 class="product-title mb-2">Android Smartphone 6.5 inch</h3>
+                    <div class="price-row">
+                      <span class="price">NPR 18,999</span>
+                      <span class="old-price">NPR 21,999</span>
+                      <span class="discount">-14%</span>
+                    </div>
+                    <div class="rating-row small">
+                      <i class="fa-solid fa-star text-warning"></i>
+                      <i class="fa-solid fa-star text-warning"></i>
+                      <i class="fa-solid fa-star text-warning"></i>
+                      <i class="fa-solid fa-star text-warning"></i>
+                      <i class="fa-regular fa-star text-warning"></i>
+                      <span class="text-muted ms-1">(512)</span>
+                    </div>
+                  </div>
+                  <div class="card-footer bg-white border-0">
+                    <button class="btn btn-outline-dark btn-sm w-100 btn-add-cart">Add to Cart</button>
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-6 col-md-4 product-item" data-id="P1020" data-title="Laptop 15.6 inch Core i5" data-category="Electronic Devices" data-subcategory="Laptops" data-brand="Kathmandu Gadgets" data-price="68999" data-rating="4.5" data-stock="8" data-location="Kathmandu">
+                <div class="card product-card h-100">
+                  <div class="product-thumb position-relative ratio ratio-1x1">
+                    <a href="product.html?id=P1020" class="product-link">
+                      <img src="../assets/img/placeholder.svg" alt="Laptop" class="img-fluid" />
+                    </a>
+                    <button class="btn btn-sm btn-light wishlist-btn" data-id="P1020" aria-label="Toggle wishlist">
+                      <i class="fa-solid fa-heart"></i>
+                    </button>
+                  </div>
+                  <div class="card-body">
+                    <h3 class="product-title mb-2">Laptop 15.6 inch Core i5</h3>
+                    <div class="price-row">
+                      <span class="price">NPR 68,999</span>
+                      <span class="old-price">NPR 74,999</span>
+                      <span class="discount">-8%</span>
+                    </div>
+                    <div class="rating-row small">
+                      <i class="fa-solid fa-star text-warning"></i>
+                      <i class="fa-solid fa-star text-warning"></i>
+                      <i class="fa-solid fa-star text-warning"></i>
+                      <i class="fa-solid fa-star text-warning"></i>
+                      <i class="fa-regular fa-star text-warning"></i>
+                      <span class="text-muted ms-1">(164)</span>
+                    </div>
+                  </div>
+                  <div class="card-footer bg-white border-0">
+                    <button class="btn btn-outline-dark btn-sm w-100 btn-add-cart">Add to Cart</button>
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-6 col-md-4 product-item" data-id="P1025" data-title="Air Fryer 4L" data-category="TV & Home Appliances" data-subcategory="Kitchen Appliances" data-brand="Pokhara Home Store" data-price="11999" data-rating="4.5" data-stock="15" data-location="Pokhara">
+                <div class="card product-card h-100">
+                  <div class="product-thumb position-relative ratio ratio-1x1">
+                    <a href="product.html?id=P1025" class="product-link">
+                      <img src="../assets/img/placeholder.svg" alt="Air Fryer" class="img-fluid" />
+                    </a>
+                    <button class="btn btn-sm btn-light wishlist-btn" data-id="P1025" aria-label="Toggle wishlist">
+                      <i class="fa-solid fa-heart"></i>
+                    </button>
+                  </div>
+                  <div class="card-body">
+                    <h3 class="product-title mb-2">Air Fryer 4L</h3>
+                    <div class="price-row">
+                      <span class="price">NPR 11,999</span>
+                      <span class="old-price">NPR 14,999</span>
+                      <span class="discount">-20%</span>
+                    </div>
+                    <div class="rating-row small">
+                      <i class="fa-solid fa-star text-warning"></i>
+                      <i class="fa-solid fa-star text-warning"></i>
+                      <i class="fa-solid fa-star text-warning"></i>
+                      <i class="fa-solid fa-star text-warning"></i>
+                      <i class="fa-regular fa-star text-warning"></i>
+                      <span class="text-muted ms-1">(142)</span>
+                    </div>
+                  </div>
+                  <div class="card-footer bg-white border-0">
+                    <button class="btn btn-outline-dark btn-sm w-100 btn-add-cart">Add to Cart</button>
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-6 col-md-4 product-item" data-id="P1032" data-title="Organic Masala Tea 500g" data-category="Groceries & Pets" data-subcategory="Beverages" data-brand="Nepal Essentials" data-price="599" data-rating="4.5" data-stock="120" data-location="Ilam">
+                <div class="card product-card h-100">
+                  <div class="product-thumb position-relative ratio ratio-1x1">
+                    <a href="product.html?id=P1032" class="product-link">
+                      <img src="../assets/img/placeholder.svg" alt="Masala Tea" class="img-fluid" />
+                    </a>
+                    <button class="btn btn-sm btn-light wishlist-btn" data-id="P1032" aria-label="Toggle wishlist">
+                      <i class="fa-solid fa-heart"></i>
+                    </button>
+                  </div>
+                  <div class="card-body">
+                    <h3 class="product-title mb-2">Organic Masala Tea 500g</h3>
+                    <div class="price-row">
+                      <span class="price">NPR 599</span>
+                      <span class="old-price">NPR 749</span>
+                      <span class="discount">-20%</span>
+                    </div>
+                    <div class="rating-row small">
+                      <i class="fa-solid fa-star text-warning"></i>
+                      <i class="fa-solid fa-star text-warning"></i>
+                      <i class="fa-solid fa-star text-warning"></i>
+                      <i class="fa-solid fa-star text-warning"></i>
+                      <i class="fa-regular fa-star text-warning"></i>
+                      <span class="text-muted ms-1">(154)</span>
+                    </div>
+                  </div>
+                  <div class="card-footer bg-white border-0">
+                    <button class="btn btn-outline-dark btn-sm w-100 btn-add-cart">Add to Cart</button>
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-6 col-md-4 product-item" data-id="P1040" data-title="Bedsheet Set Queen Size" data-category="Home & Lifestyle" data-subcategory="Bedding" data-brand="Pokhara Home Store" data-price="1899" data-rating="4.3" data-stock="55" data-location="Pokhara">
+                <div class="card product-card h-100">
+                  <div class="product-thumb position-relative ratio ratio-1x1">
+                    <a href="product.html?id=P1040" class="product-link">
+                      <img src="../assets/img/placeholder.svg" alt="Bedsheet" class="img-fluid" />
+                    </a>
+                    <button class="btn btn-sm btn-light wishlist-btn" data-id="P1040" aria-label="Toggle wishlist">
+                      <i class="fa-solid fa-heart"></i>
+                    </button>
+                  </div>
+                  <div class="card-body">
+                    <h3 class="product-title mb-2">Bedsheet Set Queen Size</h3>
+                    <div class="price-row">
+                      <span class="price">NPR 1,899</span>
+                      <span class="old-price">NPR 2,399</span>
+                      <span class="discount">-21%</span>
+                    </div>
+                    <div class="rating-row small">
+                      <i class="fa-solid fa-star text-warning"></i>
+                      <i class="fa-solid fa-star text-warning"></i>
+                      <i class="fa-solid fa-star text-warning"></i>
+                      <i class="fa-regular fa-star text-warning"></i>
+                      <i class="fa-regular fa-star text-warning"></i>
+                      <span class="text-muted ms-1">(67)</span>
+                    </div>
+                  </div>
+                  <div class="card-footer bg-white border-0">
+                    <button class="btn btn-outline-dark btn-sm w-100 btn-add-cart">Add to Cart</button>
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-6 col-md-4 product-item" data-id="P1045" data-title="Yoga Mat 6mm" data-category="Sports & Outdoor" data-subcategory="Fitness" data-brand="Nepal Essentials" data-price="1199" data-rating="4.5" data-stock="60" data-location="Kathmandu">
+                <div class="card product-card h-100">
+                  <div class="product-thumb position-relative ratio ratio-1x1">
+                    <a href="product.html?id=P1045" class="product-link">
+                      <img src="../assets/img/placeholder.svg" alt="Yoga Mat" class="img-fluid" />
+                    </a>
+                    <button class="btn btn-sm btn-light wishlist-btn" data-id="P1045" aria-label="Toggle wishlist">
+                      <i class="fa-solid fa-heart"></i>
+                    </button>
+                  </div>
+                  <div class="card-body">
+                    <h3 class="product-title mb-2">Yoga Mat 6mm</h3>
+                    <div class="price-row">
+                      <span class="price">NPR 1,199</span>
+                      <span class="old-price">NPR 1,499</span>
+                      <span class="discount">-20%</span>
+                    </div>
+                    <div class="rating-row small">
+                      <i class="fa-solid fa-star text-warning"></i>
+                      <i class="fa-solid fa-star text-warning"></i>
+                      <i class="fa-solid fa-star text-warning"></i>
+                      <i class="fa-solid fa-star text-warning"></i>
+                      <i class="fa-regular fa-star text-warning"></i>
+                      <span class="text-muted ms-1">(98)</span>
+                    </div>
+                  </div>
+                  <div class="card-footer bg-white border-0">
+                    <button class="btn btn-outline-dark btn-sm w-100 btn-add-cart">Add to Cart</button>
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-6 col-md-4 product-item" data-id="P1027" data-title="True Wireless Earbuds" data-category="Electronic Accessories" data-subcategory="Headphones" data-brand="Kathmandu Gadgets" data-price="2399" data-rating="4.3" data-stock="55" data-location="Kathmandu">
+                <div class="card product-card h-100">
+                  <div class="product-thumb position-relative ratio ratio-1x1">
+                    <a href="product.html?id=P1027" class="product-link">
+                      <img src="../assets/img/placeholder.svg" alt="Earbuds" class="img-fluid" />
+                    </a>
+                    <button class="btn btn-sm btn-light wishlist-btn" data-id="P1027" aria-label="Toggle wishlist">
+                      <i class="fa-solid fa-heart"></i>
+                    </button>
+                  </div>
+                  <div class="card-body">
+                    <h3 class="product-title mb-2">True Wireless Earbuds</h3>
+                    <div class="price-row">
+                      <span class="price">NPR 2,399</span>
+                      <span class="old-price">NPR 2,999</span>
+                      <span class="discount">-20%</span>
+                    </div>
+                    <div class="rating-row small">
+                      <i class="fa-solid fa-star text-warning"></i>
+                      <i class="fa-solid fa-star text-warning"></i>
+                      <i class="fa-solid fa-star text-warning"></i>
+                      <i class="fa-solid fa-star text-warning"></i>
+                      <i class="fa-regular fa-star text-warning"></i>
+                      <span class="text-muted ms-1">(386)</span>
+                    </div>
+                  </div>
+                  <div class="card-footer bg-white border-0">
+                    <button class="btn btn-outline-dark btn-sm w-100 btn-add-cart">Add to Cart</button>
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-6 col-md-4 product-item" data-id="P1036" data-title="Baby Diaper Jumbo Pack" data-category="Babies & Toys" data-subcategory="Diapers" data-brand="Daraz Mall Official" data-price="1499" data-rating="4.6" data-stock="70" data-location="Kathmandu">
+                <div class="card product-card h-100">
+                  <div class="product-thumb position-relative ratio ratio-1x1">
+                    <a href="product.html?id=P1036" class="product-link">
+                      <img src="../assets/img/placeholder.svg" alt="Baby Diaper" class="img-fluid" />
+                    </a>
+                    <button class="btn btn-sm btn-light wishlist-btn" data-id="P1036" aria-label="Toggle wishlist">
+                      <i class="fa-solid fa-heart"></i>
+                    </button>
+                  </div>
+                  <div class="card-body">
+                    <h3 class="product-title mb-2">Baby Diaper Jumbo Pack</h3>
+                    <div class="price-row">
+                      <span class="price">NPR 1,499</span>
+                      <span class="old-price">NPR 1,799</span>
+                      <span class="discount">-17%</span>
+                    </div>
+                    <div class="rating-row small">
+                      <i class="fa-solid fa-star text-warning"></i>
+                      <i class="fa-solid fa-star text-warning"></i>
+                      <i class="fa-solid fa-star text-warning"></i>
+                      <i class="fa-solid fa-star text-warning"></i>
+                      <i class="fa-regular fa-star text-warning"></i>
+                      <span class="text-muted ms-1">(233)</span>
+                    </div>
+                  </div>
+                  <div class="card-footer bg-white border-0">
+                    <button class="btn btn-outline-dark btn-sm w-100 btn-add-cart">Add to Cart</button>
+                  </div>
+                </div>
+              </div>
+              <div id="category-no-results" class="col-12 text-muted d-none">No products found for selected filters.</div>
+            </div>
 
             <nav class="mt-4" aria-label="Pagination">
-              <ul class="pagination justify-content-center" id="pagination"></ul>
+              <ul class="pagination justify-content-center" id="pagination">
+                <li class="page-item d-none"><a class="page-link" href="#" data-page="1">1</a></li>
+                <li class="page-item d-none"><a class="page-link" href="#" data-page="2">2</a></li>
+                <li class="page-item d-none"><a class="page-link" href="#" data-page="3">3</a></li>
+                <li class="page-item d-none"><a class="page-link" href="#" data-page="4">4</a></li>
+                <li class="page-item d-none"><a class="page-link" href="#" data-page="5">5</a></li>
+              </ul>
             </nav>
           </section>
         </div>

@@ -35,72 +35,55 @@ const OrderDetailsPage = (() => {
     return params.get('id');
   };
 
-  const renderTimeline = (status) => {
+  const statusClass = (status) => {
+    if (status === 'delivered') return 'bg-success';
+    if (status === 'shipped') return 'bg-info';
+    if (status === 'cancelled') return 'bg-danger';
+    return 'bg-warning';
+  };
+
+  const updateTimeline = (status) => {
     const steps = ['placed', 'shipped', 'out for delivery', 'delivered'];
-    return `
-      <div class="timeline">
-        ${steps
-          .map((step) => {
-            const active = steps.indexOf(step) <= steps.indexOf(status) ? 'active' : '';
-            return `
-              <div class="timeline-step ${active}">
-                <div class="dot"></div>
-                <div class="label">${step}</div>
-              </div>
-            `;
-          })
-          .join('')}
-      </div>
-    `;
+    const index = Math.max(0, steps.indexOf(status));
+    $('.timeline-step').each(function () {
+      const step = $(this).data('step');
+      const stepIndex = steps.indexOf(step);
+      $(this).toggleClass('active', stepIndex <= index);
+    });
   };
 
   const renderOrder = (order) => {
     if (!order) {
-      $('#order-detail').html('<div class="text-muted">Order not found.</div>');
+      $('#order-not-found').removeClass('d-none');
+      $('.order-detail-card').addClass('d-none');
       return;
     }
 
-    const itemsHtml = order.items
-      .map((item) => `
-        <li>${item.productId} x${item.qty} - ${UI.formatNPR(item.price * item.qty)}</li>
-      `)
-      .join('');
+    $('#order-not-found').addClass('d-none');
+    $('.order-detail-card').removeClass('d-none');
 
-    $('#order-detail').html(`
-      <div class="card order-detail-card">
-        <div class="card-body">
-          <div class="d-flex align-items-center justify-content-between flex-wrap gap-2">
-            <div>
-              <div class="text-muted small">Order #${order.orderId}</div>
-              <div class="fw-semibold">${order.date}</div>
-            </div>
-            <span class="badge bg-${order.status === 'delivered' ? 'success' : order.status === 'shipped' ? 'info' : 'warning'}">${order.status}</span>
-          </div>
-          <div class="mt-3">${renderTimeline(order.status)}</div>
-          <div class="row mt-4">
-            <div class="col-md-6">
-              <h6>Shipping Address</h6>
-              <div class="small text-muted">${order.shippingAddress ? order.shippingAddress.name : ''}</div>
-              <div class="small">${order.shippingAddress ? `${order.shippingAddress.area}, ${order.shippingAddress.city}` : ''}</div>
-              <div class="small text-muted">${order.shippingAddress ? order.shippingAddress.phone : ''}</div>
-            </div>
-            <div class="col-md-6">
-              <h6>Payment</h6>
-              <div class="small">${order.payment}</div>
-              <div class="small text-muted">Total: ${UI.formatNPR(order.total)}</div>
-            </div>
-          </div>
-          <div class="mt-4">
-            <h6>Items</h6>
-            <ul class="small">${itemsHtml}</ul>
-          </div>
-          <div class="d-flex align-items-center gap-2 mt-3">
-            <button class="btn btn-outline-dark" data-bs-toggle="modal" data-bs-target="#returnModal">Request Return</button>
-            <button class="btn btn-dark">Track Order</button>
-          </div>
-        </div>
-      </div>
-    `);
+    $('[data-field="orderId"]').text(`#${order.orderId}`);
+    $('[data-field="date"]').text(order.date);
+    const badge = $('[data-field="status"]');
+    badge.text(order.status);
+    badge.removeClass('bg-success bg-info bg-danger bg-warning').addClass(statusClass(order.status));
+
+    updateTimeline(order.status);
+
+    $('[data-field="addressName"]').text(order.shippingAddress ? order.shippingAddress.name : '');
+    $('[data-field="addressLine"]').text(order.shippingAddress ? `${order.shippingAddress.area}, ${order.shippingAddress.city}` : '');
+    $('[data-field="addressPhone"]').text(order.shippingAddress ? order.shippingAddress.phone : '');
+    $('[data-field="payment"]').text(order.payment);
+    $('[data-field="total"]').text(`Total: ${UI.formatNPR(order.total)}`);
+
+    const slots = $('#order-items .order-item-slot');
+    slots.addClass('d-none');
+
+    order.items.slice(0, slots.length).forEach((item, index) => {
+      const slot = slots.eq(index);
+      slot.text(`${item.productId} x${item.qty} - ${UI.formatNPR(item.price * item.qty)}`);
+      slot.removeClass('d-none');
+    });
   };
 
   const bindEvents = (order) => {
@@ -137,7 +120,7 @@ const OrderDetailsPage = (() => {
 
     const orderId = getOrderId();
     const orders = storage.get('orders', []);
-    const order = orders.find((item) => item.orderId === orderId);
+    const order = orders.find((item) => item.orderId === orderId) || orders[0];
 
     renderOrder(order);
     if (order) bindEvents(order);

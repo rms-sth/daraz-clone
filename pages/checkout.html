@@ -37,7 +37,47 @@
                       <h2 class="h6 mb-0">Delivery Address</h2>
                       <button class="btn btn-sm btn-outline-dark" data-bs-toggle="modal" data-bs-target="#addressModal">Add New</button>
                     </div>
-                    <div id="address-list"></div>
+                    <div id="address-list">
+                      <div class="card mb-2 d-none address-slot" data-slot="1">
+                        <div class="card-body">
+                          <div class="form-check">
+                            <input class="form-check-input" type="radio" name="address" value="" />
+                            <label class="form-check-label">
+                              <div class="fw-semibold" data-field="name">Full Name</div>
+                              <div class="small text-muted" data-field="phone">9800000000</div>
+                              <div class="small" data-field="line">Area, City, Province</div>
+                              <div class="small text-muted" data-field="landmark"></div>
+                            </label>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="card mb-2 d-none address-slot" data-slot="2">
+                        <div class="card-body">
+                          <div class="form-check">
+                            <input class="form-check-input" type="radio" name="address" value="" />
+                            <label class="form-check-label">
+                              <div class="fw-semibold" data-field="name">Full Name</div>
+                              <div class="small text-muted" data-field="phone">9800000000</div>
+                              <div class="small" data-field="line">Area, City, Province</div>
+                              <div class="small text-muted" data-field="landmark"></div>
+                            </label>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="card mb-2 d-none address-slot" data-slot="3">
+                        <div class="card-body">
+                          <div class="form-check">
+                            <input class="form-check-input" type="radio" name="address" value="" />
+                            <label class="form-check-label">
+                              <div class="fw-semibold" data-field="name">Full Name</div>
+                              <div class="small text-muted" data-field="phone">9800000000</div>
+                              <div class="small" data-field="line">Area, City, Province</div>
+                              <div class="small text-muted" data-field="landmark"></div>
+                            </label>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
                     <div id="address-empty" class="text-muted small">No address saved yet.</div>
                     <button class="btn btn-dark mt-3" id="toShipping">Continue to Shipping</button>
                   </div>
@@ -94,7 +134,29 @@
             <div class="card summary-card">
               <div class="card-body">
                 <h2 class="h6">Order Summary</h2>
-                <div id="checkout-summary-items" class="small text-muted"></div>
+                <div id="checkout-summary-items" class="small text-muted">
+                  <div id="summary-empty" class="text-muted d-none">Cart is empty.</div>
+                  <div class="d-flex justify-content-between d-none summary-slot" data-slot="1">
+                    <span data-field="label">Item x1</span>
+                    <span data-field="value">NPR 0</span>
+                  </div>
+                  <div class="d-flex justify-content-between d-none summary-slot" data-slot="2">
+                    <span data-field="label">Item x1</span>
+                    <span data-field="value">NPR 0</span>
+                  </div>
+                  <div class="d-flex justify-content-between d-none summary-slot" data-slot="3">
+                    <span data-field="label">Item x1</span>
+                    <span data-field="value">NPR 0</span>
+                  </div>
+                  <div class="d-flex justify-content-between d-none summary-slot" data-slot="4">
+                    <span data-field="label">Item x1</span>
+                    <span data-field="value">NPR 0</span>
+                  </div>
+                  <div class="d-flex justify-content-between d-none summary-slot" data-slot="5">
+                    <span data-field="label">Item x1</span>
+                    <span data-field="value">NPR 0</span>
+                  </div>
+                </div>
                 <div class="d-flex align-items-center justify-content-between mt-3">
                   <span>Subtotal</span>
                   <span id="checkout-subtotal">NPR 0</span>

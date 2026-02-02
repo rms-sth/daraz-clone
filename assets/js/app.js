@@ -34,47 +34,27 @@ const App = (() => {
     });
   };
 
-  const buildMegaMenu = (categories) => {
+  const initMegaMenu = () => {
     const list = $('.categories-list ul');
-    if (!list.length) return;
-    list.empty();
+    const panels = $('.subcat-panel');
+    if (!list.length || !panels.length) return;
 
-    categories.forEach((category, index) => {
-      const item = $(
-        `<li><a href="#" data-cat="${category.name}" class="${index === 0 ? 'active' : ''}">${category.name}</a></li>`
-      );
-      list.append(item);
-    });
-
-    const panel = $('.mega-panel');
-    const renderPanel = (category) => {
-      if (!panel.length) return;
-      if (!category) {
-        panel.html('<div class="p-4 text-muted small">Hover a category to see subcategories.</div>');
-        return;
-      }
-      const sub = category.subcategories || [];
-      const subMarkup = sub
-        .map(
-          (item) => `<a href="category.html?cat=${encodeURIComponent(category.name)}&sub=${encodeURIComponent(item)}" class="subcat-link">${item}</a>`
-        )
-        .join('');
-      panel.html(`
-        <div class="p-4">
-          <div class="fw-semibold mb-2">${category.name}</div>
-          <div class="subcat-grid">${subMarkup || '<span class="text-muted">No subcategories</span>'}</div>
-        </div>
-      `);
+    const showPanel = (cat) => {
+      panels.addClass('d-none');
+      panels.filter(`[data-cat="${cat}"]`).removeClass('d-none');
     };
 
-    renderPanel(categories[0]);
+    const first = list.find('a').first();
+    if (first.length) {
+      list.find('a').removeClass('active');
+      first.addClass('active');
+      showPanel(first.data('cat'));
+    }
 
     list.on('mouseenter', 'a', function () {
-      const name = $(this).data('cat');
       list.find('a').removeClass('active');
       $(this).addClass('active');
-      const category = categories.find((cat) => cat.name === name);
-      renderPanel(category);
+      showPanel($(this).data('cat'));
     });
   };
 
@@ -85,16 +65,6 @@ const App = (() => {
       if (!cat) return;
       window.location.href = `category.html?cat=${encodeURIComponent(cat)}`;
     });
-  };
-
-  const initMegaMenu = () => {
-    $.getJSON(`${getBasePath()}/assets/data/categories.json`)
-      .done((categories) => {
-        buildMegaMenu(categories);
-      })
-      .fail(() => {
-        // keep default
-      });
   };
 
   const init = () => {

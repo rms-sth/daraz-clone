@@ -2,9 +2,7 @@
 
 const WishlistPage = (() => {
   const state = {
-    products: [],
     wishlist: [],
-    sellers: [],
   };
 
   const storage = {
@@ -27,94 +25,70 @@ const WishlistPage = (() => {
     $('.cart-count').text(count);
   };
 
-  const getWishlist = () => storage.get('wishlist', []);
+  const normalizeWishlist = (items) => items.map((item) => {
+    if (typeof item === 'string') {
+      return { id: item, title: 'Wishlist Item', price: 0, image: '../assets/img/placeholder.svg' };
+    }
+    return {
+      id: item.id,
+      title: item.title || 'Wishlist Item',
+      price: item.price || 0,
+      image: item.image || '../assets/img/placeholder.svg',
+    };
+  });
 
   const renderWishlist = () => {
     const grid = $('#wishlist-grid');
     const empty = $('#wishlist-empty');
-    const wishlistSet = new Set(state.wishlist);
-    const items = state.products.filter((product) => wishlistSet.has(product.id));
+    const items = normalizeWishlist(state.wishlist);
+    const slots = grid.find('.wishlist-slot');
+
+    slots.addClass('d-none');
 
     if (!items.length) {
-      grid.empty();
       empty.removeClass('d-none');
       return;
     }
 
     empty.addClass('d-none');
 
-    const markup = items
-      .map((product) => `
-        <div class="col-6 col-md-4 col-lg-3">
-          <div class="card product-card h-100">
-            <div class="ratio ratio-1x1">
-              <img src="${product.images && product.images.length ? `../${product.images[0]}` : '../assets/img/placeholder.svg'}" alt="${product.title}" class="img-fluid" />
-            </div>
-            <div class="card-body">
-              <div class="fw-semibold small">${product.title}</div>
-              <div class="price-row">
-                <span class="price">${UI.formatNPR(product.price)}</span>
-              </div>
-            </div>
-            <div class="card-footer bg-white border-0 d-flex gap-2">
-              <button class="btn btn-sm btn-outline-dark flex-grow-1 btn-move-cart" data-id="${product.id}">Move to Cart</button>
-              <button class="btn btn-sm btn-outline-danger btn-remove" data-id="${product.id}"><i class="fa-solid fa-trash"></i></button>
-            </div>
-          </div>
-        </div>
-      `)
-      .join('');
-
-    grid.html(markup);
-  };
-
-  const renderFollowedStores = () => {
-    const list = $('#followed-stores-list');
-    if (!state.sellers.length) {
-      list.html('<div class="col-12 text-muted">No followed stores yet.</div>');
-      return;
-    }
-
-    const picks = state.sellers.slice(0, 3);
-    const markup = picks
-      .map((seller) => `
-        <div class="col-md-4">
-          <div class="card store-card">
-            <div class="card-body">
-              <div class="fw-semibold">${seller.name}</div>
-              <div class="small text-muted">Positive Rating ${seller.ratingPct}%</div>
-              <button class="btn btn-sm btn-outline-dark mt-2">Visit Store</button>
-            </div>
-          </div>
-        </div>
-      `)
-      .join('');
-
-    list.html(markup);
+    items.forEach((product, index) => {
+      const card = slots.eq(index);
+      if (!card.length) return;
+      card.find('[data-field="image"]').attr('src', product.image).attr('alt', product.title);
+      card.find('[data-field="title"]').text(product.title);
+      card.find('[data-field="price"]').text(UI.formatNPR(product.price));
+      card.find('[data-field="move"]').attr('data-id', product.id);
+      card.find('[data-field="remove"]').attr('data-id', product.id);
+      card.removeClass('d-none');
+    });
   };
 
   const removeItem = (id) => {
-    state.wishlist = state.wishlist.filter((item) => item !== id);
+    state.wishlist = state.wishlist.filter((item) => (typeof item === 'string' ? item !== id : item.id !== id));
     storage.set('wishlist', state.wishlist);
     renderWishlist();
   };
 
   const moveToCart = (id) => {
+    const item = state.wishlist.find((entry) => (typeof entry === 'string' ? entry === id : entry.id === id));
+    const product = typeof item === 'string' ? { id: item, title: 'Wishlist Item', price: 0, image: '../assets/img/placeholder.svg' } : item;
+
     if (typeof Cart !== 'undefined' && typeof Cart.add === 'function') {
-      Cart.add(id, { color: '', size: '' }, 1);
+      Cart.add(product.id, { color: '', size: '' }, 1, product);
     } else {
       const cart = storage.get('cart', []);
-      const key = `${id}||`;
-      const existing = cart.find((item) => item.key === key);
+      const key = `${product.id}||`;
+      const existing = cart.find((entry) => entry.key === key);
       if (existing) {
         existing.qty += 1;
       } else {
-        cart.push({ key, productId: id, qty: 1, variant: { color: '', size: '' } });
+        cart.push({ key, productId: product.id, qty: 1, variant: { color: '', size: '' }, product });
       }
       storage.set('cart', cart);
       $(document).trigger('cart:updated', [cart]);
     }
-    removeItem(id);
+    removeItem(product.id);
   };
 
   const bindEvents = () => {
@@ -143,21 +117,8 @@ const WishlistPage = (() => {
   const init = () => {
     if ($('body').data('page') !== 'wishlist') return;
 
-    state.wishlist = getWishlist();
-
-    $.when(
-      $.getJSON('../assets/data/products.json'),
-      $.getJSON('../assets/data/sellers.json')
-    )
-      .done((productsRes, sellersRes) => {
-        state.products = productsRes[0];
-        state.sellers = sellersRes[0];
-        renderWishlist();
-        renderFollowedStores();
-      })
-      .fail(() => {
-        $('#wishlist-grid').html('<div class="col-12 text-danger">Unable to load wishlist.</div>');
-      });
+    state.wishlist = storage.get('wishlist', []);
+    renderWishlist();
 
     bindEvents();
     updateCartCount();

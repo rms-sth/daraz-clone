@@ -21,43 +21,29 @@ const OrderSuccessPage = (() => {
   const renderOrder = () => {
     const order = storage.get('lastOrder', null);
     if (!order) {
-      $('#order-summary').html('<div class="text-muted">Order details not available.</div>');
+      $('#order-summary').addClass('d-none');
+      $('#order-empty').removeClass('d-none');
       return;
     }
 
-    const items = order.items
-      .map((item) => `<li>${item.productId} x${item.qty} - ${UI.formatNPR(item.price * item.qty)}</li>`)
-      .join('');
+    $('#order-summary').removeClass('d-none');
+    $('#order-empty').addClass('d-none');
 
-    $('#order-summary').html(`
-      <div class="row">
-        <div class="col-md-6">
-          <div class="small text-muted">Order Number</div>
-          <div class="fw-semibold">${order.orderId}</div>
-        </div>
-        <div class="col-md-6">
-          <div class="small text-muted">Date</div>
-          <div class="fw-semibold">${order.date}</div>
-        </div>
-        <div class="col-md-6 mt-3">
-          <div class="small text-muted">Total</div>
-          <div class="fw-semibold">${UI.formatNPR(order.total)}</div>
-        </div>
-        <div class="col-md-6 mt-3">
-          <div class="small text-muted">Payment</div>
-          <div class="fw-semibold">${order.payment}</div>
-        </div>
-        <div class="col-md-6 mt-3">
-          <div class="small text-muted">Shipping Address</div>
-          <div class="fw-semibold">${order.shippingAddress ? order.shippingAddress.name : ''}</div>
-          <div class="small text-muted">${order.shippingAddress ? `${order.shippingAddress.area}, ${order.shippingAddress.city}` : ''}</div>
-        </div>
-        <div class="col-md-6 mt-3">
-          <div class="small text-muted">Items</div>
-          <ul class="small">${items}</ul>
-        </div>
-      </div>
-    `);
+    $('#order-number').text(order.orderId);
+    $('#order-date').text(order.date);
+    $('#order-total').text(UI.formatNPR(order.total));
+    $('#order-payment').text(order.payment);
+    $('#order-address-name').text(order.shippingAddress ? order.shippingAddress.name : '');
+    $('#order-address-line').text(order.shippingAddress ? `${order.shippingAddress.area}, ${order.shippingAddress.city}` : '');
+
+    const slots = $('#order-items .order-item-slot');
+    slots.addClass('d-none');
+
+    order.items.slice(0, slots.length).forEach((item, index) => {
+      const slot = slots.eq(index);
+      slot.text(`${item.productId} x${item.qty} - ${UI.formatNPR(item.price * item.qty)}`);
+      slot.removeClass('d-none');
+    });
   };
 
   const init = () => {

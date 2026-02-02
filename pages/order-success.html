@@ -21,7 +21,42 @@
             </div>
             <h1 class="h4 mb-2">Order Placed Successfully!</h1>
             <p class="text-muted mb-4">Thank you for shopping with us. Your order has been confirmed.</p>
-            <div class="order-summary text-start" id="order-summary"></div>
+            <div id="order-empty" class="text-muted d-none">Order details not available.</div>
+            <div class="order-summary text-start" id="order-summary">
+              <div class="row">
+                <div class="col-md-6">
+                  <div class="small text-muted">Order Number</div>
+                  <div class="fw-semibold" id="order-number">ORD-0000</div>
+                </div>
+                <div class="col-md-6">
+                  <div class="small text-muted">Date</div>
+                  <div class="fw-semibold" id="order-date">2026-01-01</div>
+                </div>
+                <div class="col-md-6 mt-3">
+                  <div class="small text-muted">Total</div>
+                  <div class="fw-semibold" id="order-total">NPR 0</div>
+                </div>
+                <div class="col-md-6 mt-3">
+                  <div class="small text-muted">Payment</div>
+                  <div class="fw-semibold" id="order-payment">COD</div>
+                </div>
+                <div class="col-md-6 mt-3">
+                  <div class="small text-muted">Shipping Address</div>
+                  <div class="fw-semibold" id="order-address-name">Demo User</div>
+                  <div class="small text-muted" id="order-address-line">Thamel, Kathmandu</div>
+                </div>
+                <div class="col-md-6 mt-3">
+                  <div class="small text-muted">Items</div>
+                  <ul class="small" id="order-items">
+                    <li class="order-item-slot d-none" data-slot="1">Item x1 - NPR 0</li>
+                    <li class="order-item-slot d-none" data-slot="2">Item x1 - NPR 0</li>
+                    <li class="order-item-slot d-none" data-slot="3">Item x1 - NPR 0</li>
+                    <li class="order-item-slot d-none" data-slot="4">Item x1 - NPR 0</li>
+                    <li class="order-item-slot d-none" data-slot="5">Item x1 - NPR 0</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
             <div class="d-flex flex-wrap justify-content-center gap-2 mt-4">
               <a href="orders.html" class="btn btn-outline-dark">Track Order</a>
               <a href="home.html" class="btn btn-dark">Continue Shopping</a>

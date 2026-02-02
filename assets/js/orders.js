@@ -27,35 +27,38 @@ const OrdersPage = (() => {
     return session.user;
   };
 
+  const statusClass = (status) => {
+    if (status === 'delivered') return 'bg-success';
+    if (status === 'shipped') return 'bg-info';
+    if (status === 'cancelled') return 'bg-danger';
+    return 'bg-warning';
+  };
+
   const renderOrders = (orders) => {
-    const list = $('#orders-list');
+    const slots = $('.order-slot');
+    const empty = $('#orders-empty');
+
+    slots.addClass('d-none');
+
     if (!orders.length) {
-      list.html('<div class="text-muted">No orders found.</div>');
+      empty.removeClass('d-none');
       return;
     }
 
-    list.html(
-      orders
-        .map((order) => `
-          <div class="card order-card mb-3">
-            <div class="card-body">
-              <div class="d-flex align-items-center justify-content-between">
-                <div>
-                  <div class="text-muted small">Order #${order.orderId}</div>
-                  <div class="fw-semibold">${order.date}</div>
-                </div>
-                <span class="badge bg-${order.status === 'delivered' ? 'success' : order.status === 'shipped' ? 'info' : order.status === 'cancelled' ? 'danger' : 'warning'}">${order.status}</span>
-              </div>
-              <div class="mt-2 small">${order.items.length} item(s) • ${order.payment}</div>
-              <div class="d-flex align-items-center justify-content-between mt-3">
-                <div class="fw-semibold">Total: ${UI.formatNPR(order.total)}</div>
-                <a href="order-details.html?id=${order.orderId}" class="btn btn-sm btn-outline-dark">View Details</a>
-              </div>
-            </div>
-          </div>
-        `)
-        .join('')
-    );
+    empty.addClass('d-none');
+
+    orders.slice(0, slots.length).forEach((order, index) => {
+      const card = slots.eq(index);
+      card.removeClass('d-none');
+      card.find('[data-field="orderId"]').text(`#${order.orderId}`);
+      card.find('[data-field="date"]').text(order.date);
+      const badge = card.find('[data-field="status"]');
+      badge.text(order.status);
+      badge.removeClass('bg-success bg-info bg-danger bg-warning').addClass(statusClass(order.status));
+      card.find('[data-field="meta"]').text(`${order.items.length} item(s) • ${order.payment}`);
+      card.find('[data-field="total"]').text(`Total: ${UI.formatNPR(order.total)}`);
+      card.find('[data-field="detailsLink"]').attr('href', `order-details.html?id=${order.orderId}`);
+    });
   };
 
   const init = () => {

@@ -20,7 +20,7 @@
             <div class="text-muted small">
               <span id="search-count">0</span> items for "<span id="search-term"></span>"
             </div>
-            <div id="did-you-mean" class="small text-warning mt-1"></div>
+            <div id="did-you-mean" class="small text-warning mt-1 d-none">Did you mean <a href="#">suggestion</a>?</div>
           </div>
           <div class="d-flex align-items-center gap-2">
             <label class="small text-muted" for="searchSort">Sort by</label>
@@ -47,7 +47,36 @@
                 </div>
                 <div class="mb-3">
                   <label class="form-label">Brand</label>
-                  <div id="searchBrandFilters" class="filter-list"></div>
+                  <div id="searchBrandFilters" class="filter-list">
+                    <div class="form-check">
+                      <input class="form-check-input search-brand-filter" type="checkbox" value="Himalayan Style" id="search-brand-himalayan-style" />
+                      <label class="form-check-label" for="search-brand-himalayan-style">Himalayan Style</label>
+                    </div>
+                    <div class="form-check">
+                      <input class="form-check-input search-brand-filter" type="checkbox" value="Lalitpur Fashion Hub" id="search-brand-lalitpur-fashion-hub" />
+                      <label class="form-check-label" for="search-brand-lalitpur-fashion-hub">Lalitpur Fashion Hub</label>
+                    </div>
+                    <div class="form-check">
+                      <input class="form-check-input search-brand-filter" type="checkbox" value="Daraz Mall Official" id="search-brand-daraz-mall" />
+                      <label class="form-check-label" for="search-brand-daraz-mall">Daraz Mall Official</label>
+                    </div>
+                    <div class="form-check">
+                      <input class="form-check-input search-brand-filter" type="checkbox" value="Kathmandu Gadgets" id="search-brand-kathmandu-gadgets" />
+                      <label class="form-check-label" for="search-brand-kathmandu-gadgets">Kathmandu Gadgets</label>
+                    </div>
+                    <div class="form-check">
+                      <input class="form-check-input search-brand-filter" type="checkbox" value="Everest Electronics" id="search-brand-everest-electronics" />
+                      <label class="form-check-label" for="search-brand-everest-electronics">Everest Electronics</label>
+                    </div>
+                    <div class="form-check">
+                      <input class="form-check-input search-brand-filter" type="checkbox" value="Pokhara Home Store" id="search-brand-pokhara-home" />
+                      <label class="form-check-label" for="search-brand-pokhara-home">Pokhara Home Store</label>
+                    </div>
+                    <div class="form-check">
+                      <input class="form-check-input search-brand-filter" type="checkbox" value="Nepal Essentials" id="search-brand-nepal-essentials" />
+                      <label class="form-check-label" for="search-brand-nepal-essentials">Nepal Essentials</label>
+                    </div>
+                  </div>
                 </div>
                 <div class="mb-3">
                   <label class="form-label">Rating</label>
@@ -72,9 +101,155 @@
           </aside>
 
           <section class="col-lg-9">
-            <div id="search-grid" class="row g-3"></div>
+            <div id="search-grid" class="row g-3">
+              <div class="col-6 col-md-4 product-item" data-id="P1001" data-title="Women's Floral Kurta Set" data-category="Women's Fashion" data-subcategory="Kurtas" data-brand="Himalayan Style" data-price="1899" data-rating="4.6">
+                <div class="card product-card h-100">
+                  <div class="product-thumb position-relative ratio ratio-1x1">
+                    <a href="product.html?id=P1001" class="product-link">
+                      <img src="../assets/img/placeholder.svg" alt="Women's Floral Kurta Set" class="img-fluid" />
+                    </a>
+                    <button class="btn btn-sm btn-light wishlist-btn" data-id="P1001" aria-label="Toggle wishlist">
+                      <i class="fa-solid fa-heart"></i>
+                    </button>
+                  </div>
+                  <div class="card-body">
+                    <h3 class="product-title mb-2">Women's Floral Kurta Set</h3>
+                    <div class="price-row">
+                      <span class="price">NPR 1,899</span>
+                    </div>
+                    <div class="rating-row small"><i class="fa-solid fa-star text-warning"></i><i class="fa-solid fa-star text-warning"></i><i class="fa-solid fa-star text-warning"></i><i class="fa-solid fa-star text-warning"></i><i class="fa-regular fa-star text-warning"></i><span class="text-muted ms-1">(214)</span></div>
+                  </div>
+                  <div class="card-footer bg-white border-0">
+                    <button class="btn btn-outline-dark btn-sm w-100 btn-add-cart">Add to Cart</button>
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-6 col-md-4 product-item" data-id="P1007" data-title="Vitamin C Serum 30ml" data-category="Health & Beauty" data-subcategory="Skin Care" data-brand="Daraz Mall Official" data-price="1299" data-rating="4.7">
+                <div class="card product-card h-100">
+                  <div class="product-thumb position-relative ratio ratio-1x1">
+                    <a href="product.html?id=P1007" class="product-link">
+                      <img src="../assets/img/placeholder.svg" alt="Vitamin C Serum" class="img-fluid" />
+                    </a>
+                    <button class="btn btn-sm btn-light wishlist-btn" data-id="P1007" aria-label="Toggle wishlist">
+                      <i class="fa-solid fa-heart"></i>
+                    </button>
+                  </div>
+                  <div class="card-body">
+                    <h3 class="product-title mb-2">Vitamin C Serum 30ml</h3>
+                    <div class="price-row">
+                      <span class="price">NPR 1,299</span>
+                    </div>
+                    <div class="rating-row small"><i class="fa-solid fa-star text-warning"></i><i class="fa-solid fa-star text-warning"></i><i class="fa-solid fa-star text-warning"></i><i class="fa-solid fa-star text-warning"></i><i class="fa-solid fa-star-half-stroke text-warning"></i><span class="text-muted ms-1">(322)</span></div>
+                  </div>
+                  <div class="card-footer bg-white border-0">
+                    <button class="btn btn-outline-dark btn-sm w-100 btn-add-cart">Add to Cart</button>
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-6 col-md-4 product-item" data-id="P1019" data-title="Android Smartphone 6.5 inch" data-category="Electronic Devices" data-subcategory="Smartphones" data-brand="Everest Electronics" data-price="18999" data-rating="4.4">
+                <div class="card product-card h-100">
+                  <div class="product-thumb position-relative ratio ratio-1x1">
+                    <a href="product.html?id=P1019" class="product-link">
+                      <img src="../assets/img/placeholder.svg" alt="Android Smartphone" class="img-fluid" />
+                    </a>
+                    <button class="btn btn-sm btn-light wishlist-btn" data-id="P1019" aria-label="Toggle wishlist">
+                      <i class="fa-solid fa-heart"></i>
+                    </button>
+                  </div>
+                  <div class="card-body">
+                    <h3 class="product-title mb-2">Android Smartphone 6.5 inch</h3>
+                    <div class="price-row">
+                      <span class="price">NPR 18,999</span>
+                    </div>
+                    <div class="rating-row small"><i class="fa-solid fa-star text-warning"></i><i class="fa-solid fa-star text-warning"></i><i class="fa-solid fa-star text-warning"></i><i class="fa-solid fa-star text-warning"></i><i class="fa-regular fa-star text-warning"></i><span class="text-muted ms-1">(512)</span></div>
+                  </div>
+                  <div class="card-footer bg-white border-0">
+                    <button class="btn btn-outline-dark btn-sm w-100 btn-add-cart">Add to Cart</button>
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-6 col-md-4 product-item" data-id="P1025" data-title="Air Fryer 4L" data-category="TV & Home Appliances" data-subcategory="Kitchen Appliances" data-brand="Pokhara Home Store" data-price="11999" data-rating="4.5">
+                <div class="card product-card h-100">
+                  <div class="product-thumb position-relative ratio ratio-1x1">
+                    <a href="product.html?id=P1025" class="product-link">
+                      <img src="../assets/img/placeholder.svg" alt="Air Fryer" class="img-fluid" />
+                    </a>
+                    <button class="btn btn-sm btn-light wishlist-btn" data-id="P1025" aria-label="Toggle wishlist">
+                      <i class="fa-solid fa-heart"></i>
+                    </button>
+                  </div>
+                  <div class="card-body">
+                    <h3 class="product-title mb-2">Air Fryer 4L</h3>
+                    <div class="price-row">
+                      <span class="price">NPR 11,999</span>
+                    </div>
+                    <div class="rating-row small"><i class="fa-solid fa-star text-warning"></i><i class="fa-solid fa-star text-warning"></i><i class="fa-solid fa-star text-warning"></i><i class="fa-solid fa-star text-warning"></i><i class="fa-regular fa-star text-warning"></i><span class="text-muted ms-1">(142)</span></div>
+                  </div>
+                  <div class="card-footer bg-white border-0">
+                    <button class="btn btn-outline-dark btn-sm w-100 btn-add-cart">Add to Cart</button>
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-6 col-md-4 product-item" data-id="P1045" data-title="Yoga Mat 6mm" data-category="Sports & Outdoor" data-subcategory="Fitness" data-brand="Nepal Essentials" data-price="1199" data-rating="4.5">
+                <div class="card product-card h-100">
+                  <div class="product-thumb position-relative ratio ratio-1x1">
+                    <a href="product.html?id=P1045" class="product-link">
+                      <img src="../assets/img/placeholder.svg" alt="Yoga Mat" class="img-fluid" />
+                    </a>
+                    <button class="btn btn-sm btn-light wishlist-btn" data-id="P1045" aria-label="Toggle wishlist">
+                      <i class="fa-solid fa-heart"></i>
+                    </button>
+                  </div>
+                  <div class="card-body">
+                    <h3 class="product-title mb-2">Yoga Mat 6mm</h3>
+                    <div class="price-row">
+                      <span class="price">NPR 1,199</span>
+                    </div>
+                    <div class="rating-row small"><i class="fa-solid fa-star text-warning"></i><i class="fa-solid fa-star text-warning"></i><i class="fa-solid fa-star text-warning"></i><i class="fa-solid fa-star text-warning"></i><i class="fa-regular fa-star text-warning"></i><span class="text-muted ms-1">(98)</span></div>
+                  </div>
+                  <div class="card-footer bg-white border-0">
+                    <button class="btn btn-outline-dark btn-sm w-100 btn-add-cart">Add to Cart</button>
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-6 col-md-4 product-item" data-id="P1040" data-title="Bedsheet Set Queen Size" data-category="Home & Lifestyle" data-subcategory="Bedding" data-brand="Pokhara Home Store" data-price="1899" data-rating="4.3">
+                <div class="card product-card h-100">
+                  <div class="product-thumb position-relative ratio ratio-1x1">
+                    <a href="product.html?id=P1040" class="product-link">
+                      <img src="../assets/img/placeholder.svg" alt="Bedsheet" class="img-fluid" />
+                    </a>
+                    <button class="btn btn-sm btn-light wishlist-btn" data-id="P1040" aria-label="Toggle wishlist">
+                      <i class="fa-solid fa-heart"></i>
+                    </button>
+                  </div>
+                  <div class="card-body">
+                    <h3 class="product-title mb-2">Bedsheet Set Queen Size</h3>
+                    <div class="price-row">
+                      <span class="price">NPR 1,899</span>
+                    </div>
+                    <div class="rating-row small"><i class="fa-solid fa-star text-warning"></i><i class="fa-solid fa-star text-warning"></i><i class="fa-solid fa-star text-warning"></i><i class="fa-regular fa-star text-warning"></i><i class="fa-regular fa-star text-warning"></i><span class="text-muted ms-1">(67)</span></div>
+                  </div>
+                  <div class="card-footer bg-white border-0">
+                    <button class="btn btn-outline-dark btn-sm w-100 btn-add-cart">Add to Cart</button>
+                  </div>
+                </div>
+              </div>
+              <div id="search-no-results" class="col-12 text-muted d-none">No results found. Try another search.</div>
+            </div>
+
             <nav class="mt-4" aria-label="Pagination">
-              <ul class="pagination justify-content-center" id="search-pagination"></ul>
+              <ul class="pagination justify-content-center" id="search-pagination">
+                <li class="page-item d-none"><a class="page-link" href="#" data-page="1">1</a></li>
+                <li class="page-item d-none"><a class="page-link" href="#" data-page="2">2</a></li>
+                <li class="page-item d-none"><a class="page-link" href="#" data-page="3">3</a></li>
+                <li class="page-item d-none"><a class="page-link" href="#" data-page="4">4</a></li>
+                <li class="page-item d-none"><a class="page-link" href="#" data-page="5">5</a></li>
+              </ul>
             </nav>
           </section>
         </div>

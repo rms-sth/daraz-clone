@@ -16,14 +16,15 @@ const Store = (() => {
   };
 
   const Cart = {
-    add(productId, variant = { color: '', size: '' }, qty = 1) {
+    add(productId, variant = { color: '', size: '' }, qty = 1, productData = null) {
       const items = storage.get('cart', []);
       const key = `${productId}|${variant.color || ''}|${variant.size || ''}`;
       const existing = items.find((item) => item.key === key);
       if (existing) {
         existing.qty += qty;
+        if (productData) existing.product = productData;
       } else {
-        items.push({ key, productId, variant, qty });
+        items.push({ key, productId, variant, qty, product: productData });
       }
       storage.set('cart', items);
       $(document).trigger('cart:updated', [items]);
@@ -56,13 +57,14 @@ const Store = (() => {
   };
 
   const Wishlist = {
-    toggle(productId) {
+    toggle(productId, productData = null) {
       const items = storage.get('wishlist', []);
-      const index = items.indexOf(productId);
+      const ids = items.map((item) => (typeof item === 'string' ? item : item.id));
+      const index = ids.indexOf(productId);
       if (index >= 0) {
         items.splice(index, 1);
       } else {
-        items.unshift(productId);
+        items.unshift(productData || { id: productId });
       }
       storage.set('wishlist', items);
       $(document).trigger('wishlist:updated', [items]);
@@ -85,10 +87,14 @@ const Store = (() => {
 
     storage.set('users', [demoUser]);
     storage.set('session', { token: `sess_${Date.now()}`, user: demoUser });
-    storage.set('wishlist', ['P1007', 'P1019', 'P1025']);
+    storage.set('wishlist', [
+      { id: 'P1007', title: 'Vitamin C Serum 30ml', price: 1299, image: '../assets/img/placeholder.svg' },
+      { id: 'P1019', title: 'Android Smartphone 6.5 inch', price: 18999, image: '../assets/img/placeholder.svg' },
+      { id: 'P1025', title: 'Air Fryer 4L', price: 11999, image: '../assets/img/placeholder.svg' },
+    ]);
     storage.set('cart', [
-      { key: 'P1001|Maroon|M', productId: 'P1001', qty: 1, variant: { color: 'Maroon', size: 'M' } },
-      { key: 'P1027|Black|', productId: 'P1027', qty: 1, variant: { color: 'Black', size: '' } },
+      { key: 'P1001|Maroon|M', productId: 'P1001', qty: 1, variant: { color: 'Maroon', size: 'M' }, product: { id: 'P1001', title: "Women's Floral Kurta Set", price: 1899, image: '../assets/img/placeholder.svg' } },
+      { key: 'P1027|Black|', productId: 'P1027', qty: 1, variant: { color: 'Black', size: '' }, product: { id: 'P1027', title: 'True Wireless Earbuds', price: 2399, image: '../assets/img/placeholder.svg' } },
     ]);
     storage.set('addresses', [
       {

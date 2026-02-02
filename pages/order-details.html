@@ -15,7 +15,67 @@
     <main class="page order-details-page">
       <div class="container py-4">
         <a href="orders.html" class="btn btn-sm btn-outline-secondary mb-3"><i class="fa-solid fa-arrow-left"></i> Back to Orders</a>
-        <div id="order-detail"></div>
+        <div id="order-detail">
+          <div class="card order-detail-card">
+            <div class="card-body">
+              <div class="d-flex align-items-center justify-content-between flex-wrap gap-2">
+                <div>
+                  <div class="text-muted small">Order <span data-field="orderId">#ORD-0000</span></div>
+                  <div class="fw-semibold" data-field="date">2026-01-01</div>
+                </div>
+                <span class="badge bg-warning" data-field="status">placed</span>
+              </div>
+              <div class="mt-3">
+                <div class="timeline">
+                  <div class="timeline-step" data-step="placed">
+                    <div class="dot"></div>
+                    <div class="label">placed</div>
+                  </div>
+                  <div class="timeline-step" data-step="shipped">
+                    <div class="dot"></div>
+                    <div class="label">shipped</div>
+                  </div>
+                  <div class="timeline-step" data-step="out for delivery">
+                    <div class="dot"></div>
+                    <div class="label">out for delivery</div>
+                  </div>
+                  <div class="timeline-step" data-step="delivered">
+                    <div class="dot"></div>
+                    <div class="label">delivered</div>
+                  </div>
+                </div>
+              </div>
+              <div class="row mt-4">
+                <div class="col-md-6">
+                  <h6>Shipping Address</h6>
+                  <div class="small text-muted" data-field="addressName">Demo User</div>
+                  <div class="small" data-field="addressLine">Thamel, Kathmandu</div>
+                  <div class="small text-muted" data-field="addressPhone">9800000000</div>
+                </div>
+                <div class="col-md-6">
+                  <h6>Payment</h6>
+                  <div class="small" data-field="payment">COD</div>
+                  <div class="small text-muted" data-field="total">Total: NPR 0</div>
+                </div>
+              </div>
+              <div class="mt-4">
+                <h6>Items</h6>
+                <ul class="small" id="order-items">
+                  <li class="order-item-slot d-none" data-slot="1">Item x1 - NPR 0</li>
+                  <li class="order-item-slot d-none" data-slot="2">Item x1 - NPR 0</li>
+                  <li class="order-item-slot d-none" data-slot="3">Item x1 - NPR 0</li>
+                  <li class="order-item-slot d-none" data-slot="4">Item x1 - NPR 0</li>
+                  <li class="order-item-slot d-none" data-slot="5">Item x1 - NPR 0</li>
+                </ul>
+              </div>
+              <div class="d-flex align-items-center gap-2 mt-3">
+                <button class="btn btn-outline-dark" data-bs-toggle="modal" data-bs-target="#returnModal">Request Return</button>
+                <button class="btn btn-dark">Track Order</button>
+              </div>
+            </div>
+          </div>
+          <div id="order-not-found" class="text-muted d-none">Order not found.</div>
+        </div>
       </div>
     </main>
 

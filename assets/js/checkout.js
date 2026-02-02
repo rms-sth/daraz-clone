@@ -3,7 +3,6 @@
 const CheckoutPage = (() => {
   const state = {
     cart: [],
-    products: [],
     addresses: [],
     selectedAddressId: null,
     shippingMethod: 'standard',
@@ -34,17 +33,14 @@ const CheckoutPage = (() => {
 
   const hydrateCart = () => {
     const cartItems = getCartItems();
-    state.cart = cartItems
-      .map((item) => {
-        const product = state.products.find((prod) => prod.id === item.productId);
-        if (!product) return null;
-        return {
-          ...item,
-          title: product.title,
-          price: product.price,
-        };
-      })
-      .filter(Boolean);
+    state.cart = cartItems.map((item) => {
+      const product = item.product || {};
+      return {
+        ...item,
+        title: product.title || item.title || item.productId,
+        price: product.price || item.price || 0,
+      };
+    });
   };
 
   const calculateTotals = () => {
@@ -55,16 +51,22 @@ const CheckoutPage = (() => {
   };
 
   const renderSummary = () => {
-    const summaryEl = $('#checkout-summary-items');
+    const slots = $('#checkout-summary-items .summary-slot');
+    slots.addClass('d-none');
+
     if (!state.cart.length) {
-      summaryEl.html('<div class="text-muted">Cart is empty.</div>');
+      $('#summary-empty').removeClass('d-none');
       return;
     }
-    summaryEl.html(
-      state.cart
-        .map((item) => `<div class="d-flex justify-content-between"><span>${item.title} x${item.qty}</span><span>${UI.formatNPR(item.price * item.qty)}</span></div>`)
-        .join('')
-    );
+
+    $('#summary-empty').addClass('d-none');
+
+    state.cart.slice(0, slots.length).forEach((item, index) => {
+      const slot = slots.eq(index);
+      slot.removeClass('d-none');
+      slot.find('[data-field="label"]').text(`${item.title} x${item.qty}`);
+      slot.find('[data-field="value"]').text(UI.formatNPR(item.price * item.qty));
+    });
 
     const totals = calculateTotals();
     $('#checkout-subtotal').text(UI.formatNPR(totals.subtotal));
@@ -73,32 +75,27 @@ const CheckoutPage = (() => {
   };
 
   const renderAddresses = () => {
-    const list = $('#address-list');
+    const slots = $('#address-list .address-slot');
+    slots.addClass('d-none');
+
     if (!state.addresses.length) {
       $('#address-empty').removeClass('d-none');
-      list.empty();
       return;
     }
 
     $('#address-empty').addClass('d-none');
-    const markup = state.addresses
-      .map((address) => `
-        <div class="card mb-2">
-          <div class="card-body">
-            <div class="form-check">
-              <input class="form-check-input" type="radio" name="address" value="${address.id}" id="addr-${address.id}" ${address.id === state.selectedAddressId ? 'checked' : ''}>
-              <label class="form-check-label" for="addr-${address.id}">
-                <div class="fw-semibold">${address.name}</div>
-                <div class="small text-muted">${address.phone}</div>
-                <div class="small">${address.area}, ${address.city}, ${address.province}</div>
-                <div class="small text-muted">${address.landmark || ''}</div>
-              </label>
-            </div>
-          </div>
-        </div>
-      `)
-      .join('');
-    list.html(markup);
+
+    state.addresses.slice(0, slots.length).forEach((address, index) => {
+      const card = slots.eq(index);
+      card.removeClass('d-none');
+      const input = card.find('input[name="address"]');
+      input.val(address.id).attr('id', `addr-${address.id}`).prop('checked', address.id === state.selectedAddressId);
+      card.find('label').attr('for', `addr-${address.id}`);
+      card.find('[data-field="name"]').text(address.name);
+      card.find('[data-field="phone"]').text(address.phone);
+      card.find('[data-field="line"]').text(`${address.area}, ${address.city}, ${address.province}`);
+      card.find('[data-field="landmark"]').text(address.landmark || '');
+    });
   };
 
   const saveAddress = (data) => {
@@ -206,16 +203,9 @@ const CheckoutPage = (() => {
     state.addresses = storage.get('addresses', []);
     state.selectedAddressId = storage.get('selectedAddress', state.addresses[0] ? state.addresses[0].id : null);
 
-    $.getJSON('../assets/data/products.json')
-      .done((products) => {
-        state.products = products;
-        hydrateCart();
-        renderAddresses();
-        renderSummary();
-      })
-      .fail(() => {
-        $('#checkout-summary-items').html('<div class="text-danger">Unable to load cart data.</div>');
-      });
+    hydrateCart();
+    renderAddresses();
+    renderSummary();
 
     bindEvents();
   };
