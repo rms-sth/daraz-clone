@@ -238,6 +238,50 @@ textarea:focus-visible {
   border-color: var(--brand-orange);
 }
 
+.product-gallery-main {
+  position: relative;
+}
+
+.product-gallery-main img {
+  cursor: zoom-in;
+}
+
+.preview-btn {
+  position: absolute;
+  left: 16px;
+  bottom: 16px;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  font-size: 0.85rem;
+  border-radius: 999px;
+  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.12);
+}
+
+.product-gallery-main:hover img {
+  transform: scale(1.03);
+  transition: transform 0.2s ease;
+}
+
+.zoom-modal .preview-stage {
+  background: #f6f7fb;
+  border-radius: 1rem;
+  padding: 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 420px;
+  overflow: hidden;
+}
+
+.zoom-modal .preview-stage img {
+  max-width: 100%;
+  max-height: 520px;
+  transform: scale(1);
+  transform-origin: center;
+  transition: transform 0.2s ease;
+}
+
 .variant-pill {
   border: 1px solid rgba(0, 0, 0, 0.1);
   padding: 0.35rem 0.75rem;

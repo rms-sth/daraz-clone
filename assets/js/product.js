@@ -1,4 +1,4 @@
-/* global $, UI */
+/* global $, UI, bootstrap */
 
 const ProductPage = (() => {
   const state = {
@@ -89,11 +89,32 @@ const ProductPage = (() => {
   };
 
   const bindEvents = () => {
+    const updateZoom = (value) => {
+      const zoom = Number(value) || 1;
+      $('#previewImage').css('transform', `scale(${zoom})`);
+      $('#zoomValue').text(`${Math.round(zoom * 100)}%`);
+    };
+
+    const openPreview = () => {
+      const src = $('#mainImage').attr('src');
+      $('#previewImage').attr('src', src);
+      $('#zoomRange').val(1);
+      updateZoom(1);
+      const modal = bootstrap.Modal.getOrCreateInstance(document.getElementById('imagePreviewModal'));
+      modal.show();
+    };
+
     $('#product-detail').on('click', '.thumb-btn', function () {
       const image = $(this).data('image');
       $('#mainImage').attr('src', image);
       $('.thumb-btn').removeClass('active');
       $(this).addClass('active');
+    });
+
+    $('#product-detail').on('click', '#mainImage, #openPreview', openPreview);
+
+    $('#zoomRange').on('input', function () {
+      updateZoom($(this).val());
     });
 
     $('#product-detail').on('click', '.color-pill', function () {
