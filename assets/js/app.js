@@ -81,7 +81,7 @@ const App = (() => {
     $(document).on('cart:updated', updateCartCount);
   };
 
-  return { init, getBasePath, loadPartials };
+  return { init };
 })();
 
 $(App.init);

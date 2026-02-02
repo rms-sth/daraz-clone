@@ -1,4 +1,4 @@
-/* global $, UI */
+/* global $ */
 
 const Auth = (() => {
   const storage = {
