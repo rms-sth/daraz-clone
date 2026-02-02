@@ -43,13 +43,6 @@ const SearchPage = (() => {
 
   const normalize = (value) => (value || '').toLowerCase();
 
-  const highlight = (text, term) => {
-    if (!term) return text;
-    const escaped = term.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
-    const regex = new RegExp(`(${escaped})`, 'ig');
-    return text.replace(regex, '<mark>$1</mark>');
-  };
-
   const extractItemData = ($el) => ({
     id: ($el.data('id') || '').toString(),
     title: $el.data('title') || $el.find('.product-title').text().trim(),
@@ -140,7 +133,7 @@ const SearchPage = (() => {
     paged.forEach((item) => {
       const titleEl = item.el.find('.product-title');
       const rawTitle = item.data.title;
-      titleEl.html(highlight(rawTitle, state.query));
+      titleEl.text(rawTitle);
       item.el.removeClass('d-none');
     });
 

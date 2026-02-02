@@ -1,24 +1,6 @@
 /* global $, Auth, Store */
 
 const App = (() => {
-  const getBasePath = () => {
-    const path = window.location.pathname;
-    return path.includes('/pages/') ? '..' : '.';
-  };
-
-  const loadPartials = () => {
-    const base = getBasePath();
-    $('#site-header').load(`${base}/partials/header.html`, () => {
-      $(document).trigger('header:loaded');
-    });
-    $('#site-footer').load(`${base}/partials/footer.html`, () => {
-      $(document).trigger('footer:loaded');
-    });
-    $('#mobile-nav').load(`${base}/partials/mobile-nav.html`, () => {
-      $(document).trigger('mobile-nav:loaded');
-    });
-  };
-
   const updateCartCount = () => {
     if (typeof Store !== 'undefined' && Store.Cart) {
       $('.cart-count').text(Store.Cart.total());
@@ -68,15 +50,13 @@ const App = (() => {
   };
 
   const init = () => {
-    loadPartials();
     wireSearch();
     wireCategoryClicks();
 
-    $(document).on('header:loaded', () => {
-      initMegaMenu();
-      updateCartCount();
-      if (Auth && Auth.init) Auth.init();
-    });
+    initMegaMenu();
+    updateCartCount();
+    if (Auth && Auth.init) Auth.init();
+    $(document).trigger('header:loaded');
 
     $(document).on('cart:updated', updateCartCount);
   };

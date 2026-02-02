@@ -146,7 +146,6 @@ const HomePage = (() => {
       const match = items.filter(`[data-id="${id}"]`).first();
       if (match.length) {
         match.removeClass('d-none');
-        recentEl.append(match);
       }
     });
   };

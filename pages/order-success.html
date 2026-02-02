@@ -9,8 +9,217 @@
     <link rel="stylesheet" href="../assets/css/styles.css" />
   </head>
   <body data-page="order-success">
-    <div id="site-header"></div>
-    <div id="mobile-nav"></div>
+    <header class="site-header">
+  <div class="utility-bar py-1">
+    <div class="container">
+      <div class="d-flex align-items-center justify-content-between flex-wrap gap-2">
+        <div class="d-flex align-items-center gap-3 text-white small">
+          <a class="text-white text-decoration-none" href="#">
+            <i class="fa-solid fa-mobile-screen me-1"></i>
+            Save more on app
+          </a>
+          <span class="opacity-75">/</span>
+          <a class="text-white text-decoration-none" href="#">Download App</a>
+        </div>
+        <div class="d-flex align-items-center gap-3 text-white small">
+          <a class="text-white text-decoration-none" href="#">Become a Seller</a>
+          <div class="dropdown">
+            <a class="dropdown-toggle text-white text-decoration-none" href="#" data-bs-toggle="dropdown" aria-expanded="false">
+              Help &amp; Support
+            </a>
+            <ul class="dropdown-menu dropdown-menu-end">
+              <li><a class="dropdown-item" href="../pages/help.html">Help Center</a></li>
+              <li><a class="dropdown-item" href="../pages/returns.html">Returns</a></li>
+              <li><a class="dropdown-item" href="../pages/contact.html">Contact Us</a></li>
+            </ul>
+          </div>
+          <a class="text-white text-decoration-none" href="../pages/login.html">Login</a>
+          <a class="text-white text-decoration-none" href="../pages/signup.html">Sign Up</a>
+          <div class="dropdown">
+            <a class="dropdown-toggle text-white text-decoration-none" href="#" data-bs-toggle="dropdown" aria-expanded="false">
+              <i class="fa-solid fa-globe me-1"></i>
+              EN
+            </a>
+            <ul class="dropdown-menu dropdown-menu-end">
+              <li><a class="dropdown-item" href="#">English</a></li>
+              <li><a class="dropdown-item" href="#">Nepali</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="main-bar py-3">
+    <div class="container">
+      <div class="d-flex align-items-center gap-3 flex-wrap">
+        <button class="btn btn-outline-light d-lg-none" type="button" aria-label="Open menu">
+          <i class="fa-solid fa-bars"></i>
+        </button>
+        <a href="../pages/home.html" class="logo text-white text-decoration-none">Daraz Inspired</a>
+        <form class="search-form flex-grow-1">
+          <div class="input-group">
+            <input type="search" class="form-control" placeholder="Search in Daraz" aria-label="Search" />
+            <button class="btn btn-dark" type="submit" aria-label="Search">
+              <i class="fa-solid fa-magnifying-glass"></i>
+            </button>
+          </div>
+        </form>
+        <a href="../pages/cart.html" class="cart-link text-white text-decoration-none position-relative">
+          <i class="fa-solid fa-cart-shopping"></i>
+          <span class="cart-count badge rounded-pill bg-light text-dark">0</span>
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <div class="categories-bar">
+    <div class="container">
+      <div class="categories-wrap d-none d-lg-inline-block">
+        <button class="categories-title" type="button">
+          <i class="fa-solid fa-bars"></i>
+          Categories
+        </button>
+        <div class="mega-menu">
+          <div class="categories-list">
+            <ul class="list-unstyled mb-0">
+              <li><a href="#" data-cat="Women's Fashion" data-subcats="Kurtas,Dresses,Tops,Jeans,Handbags">Women's Fashion</a></li>
+              <li><a href="#" data-cat="Health & Beauty" data-subcats="Skin Care,Hair Care,Personal Care,Makeup">Health &amp; Beauty</a></li>
+              <li><a href="#" data-cat="Men's Fashion" data-subcats="T-Shirts,Shirts,Jeans,Shoes">Men's Fashion</a></li>
+              <li><a href="#" data-cat="Watches & Accessories" data-subcats="Watches,Bags,Sunglasses,Wallets">Watches &amp; Accessories</a></li>
+              <li><a href="#" data-cat="Electronic Devices" data-subcats="Smartphones,Laptops,Tablets,Feature Phones">Electronic Devices</a></li>
+              <li><a href="#" data-cat="TV & Home Appliances" data-subcats="Televisions,Kitchen Appliances,Air Conditioners,Refrigerators">TV &amp; Home Appliances</a></li>
+              <li><a href="#" data-cat="Electronic Accessories" data-subcats="Headphones,Power Banks,Cables,Computer Accessories">Electronic Accessories</a></li>
+              <li><a href="#" data-cat="Groceries & Pets" data-subcats="Beverages,Rice & Staples,Pet Food,Cleaning">Groceries &amp; Pets</a></li>
+              <li><a href="#" data-cat="Babies & Toys" data-subcats="Diapers,Baby Care,Toys,Learning">Babies &amp; Toys</a></li>
+              <li><a href="#" data-cat="Home & Lifestyle" data-subcats="Home Decor,Kitchen & Dining,Bedding,Lighting">Home &amp; Lifestyle</a></li>
+              <li><a href="#" data-cat="Sports & Outdoor" data-subcats="Fitness,Outdoor,Team Sports,Cycling">Sports &amp; Outdoor</a></li>
+              <li><a href="#" data-cat="Motors/Tools/DIY" data-subcats="Car Accessories,Tools,Motorbike,DIY">Motors/Tools/DIY</a></li>
+            </ul>
+          </div>
+          <div class="mega-panel">
+            <div class="p-4 subcat-panel" data-cat="Women's Fashion">
+              <div class="fw-semibold mb-2">Women's Fashion</div>
+              <div class="subcat-grid">
+                <a href="category.html?cat=Women%27s%20Fashion&sub=Kurtas" class="subcat-link">Kurtas</a>
+                <a href="category.html?cat=Women%27s%20Fashion&sub=Dresses" class="subcat-link">Dresses</a>
+                <a href="category.html?cat=Women%27s%20Fashion&sub=Tops" class="subcat-link">Tops</a>
+                <a href="category.html?cat=Women%27s%20Fashion&sub=Jeans" class="subcat-link">Jeans</a>
+                <a href="category.html?cat=Women%27s%20Fashion&sub=Handbags" class="subcat-link">Handbags</a>
+              </div>
+            </div>
+            <div class="p-4 subcat-panel d-none" data-cat="Health & Beauty">
+              <div class="fw-semibold mb-2">Health &amp; Beauty</div>
+              <div class="subcat-grid">
+                <a href="category.html?cat=Health%20%26%20Beauty&sub=Skin%20Care" class="subcat-link">Skin Care</a>
+                <a href="category.html?cat=Health%20%26%20Beauty&sub=Hair%20Care" class="subcat-link">Hair Care</a>
+                <a href="category.html?cat=Health%20%26%20Beauty&sub=Personal%20Care" class="subcat-link">Personal Care</a>
+                <a href="category.html?cat=Health%20%26%20Beauty&sub=Makeup" class="subcat-link">Makeup</a>
+              </div>
+            </div>
+            <div class="p-4 subcat-panel d-none" data-cat="Men's Fashion">
+              <div class="fw-semibold mb-2">Men's Fashion</div>
+              <div class="subcat-grid">
+                <a href="category.html?cat=Men%27s%20Fashion&sub=T-Shirts" class="subcat-link">T-Shirts</a>
+                <a href="category.html?cat=Men%27s%20Fashion&sub=Shirts" class="subcat-link">Shirts</a>
+                <a href="category.html?cat=Men%27s%20Fashion&sub=Jeans" class="subcat-link">Jeans</a>
+                <a href="category.html?cat=Men%27s%20Fashion&sub=Shoes" class="subcat-link">Shoes</a>
+              </div>
+            </div>
+            <div class="p-4 subcat-panel d-none" data-cat="Watches & Accessories">
+              <div class="fw-semibold mb-2">Watches &amp; Accessories</div>
+              <div class="subcat-grid">
+                <a href="category.html?cat=Watches%20%26%20Accessories&sub=Watches" class="subcat-link">Watches</a>
+                <a href="category.html?cat=Watches%20%26%20Accessories&sub=Bags" class="subcat-link">Bags</a>
+                <a href="category.html?cat=Watches%20%26%20Accessories&sub=Sunglasses" class="subcat-link">Sunglasses</a>
+                <a href="category.html?cat=Watches%20%26%20Accessories&sub=Wallets" class="subcat-link">Wallets</a>
+              </div>
+            </div>
+            <div class="p-4 subcat-panel d-none" data-cat="Electronic Devices">
+              <div class="fw-semibold mb-2">Electronic Devices</div>
+              <div class="subcat-grid">
+                <a href="category.html?cat=Electronic%20Devices&sub=Smartphones" class="subcat-link">Smartphones</a>
+                <a href="category.html?cat=Electronic%20Devices&sub=Laptops" class="subcat-link">Laptops</a>
+                <a href="category.html?cat=Electronic%20Devices&sub=Tablets" class="subcat-link">Tablets</a>
+                <a href="category.html?cat=Electronic%20Devices&sub=Feature%20Phones" class="subcat-link">Feature Phones</a>
+              </div>
+            </div>
+            <div class="p-4 subcat-panel d-none" data-cat="TV & Home Appliances">
+              <div class="fw-semibold mb-2">TV &amp; Home Appliances</div>
+              <div class="subcat-grid">
+                <a href="category.html?cat=TV%20%26%20Home%20Appliances&sub=Televisions" class="subcat-link">Televisions</a>
+                <a href="category.html?cat=TV%20%26%20Home%20Appliances&sub=Kitchen%20Appliances" class="subcat-link">Kitchen Appliances</a>
+                <a href="category.html?cat=TV%20%26%20Home%20Appliances&sub=Air%20Conditioners" class="subcat-link">Air Conditioners</a>
+                <a href="category.html?cat=TV%20%26%20Home%20Appliances&sub=Refrigerators" class="subcat-link">Refrigerators</a>
+              </div>
+            </div>
+            <div class="p-4 subcat-panel d-none" data-cat="Electronic Accessories">
+              <div class="fw-semibold mb-2">Electronic Accessories</div>
+              <div class="subcat-grid">
+                <a href="category.html?cat=Electronic%20Accessories&sub=Headphones" class="subcat-link">Headphones</a>
+                <a href="category.html?cat=Electronic%20Accessories&sub=Power%20Banks" class="subcat-link">Power Banks</a>
+                <a href="category.html?cat=Electronic%20Accessories&sub=Cables" class="subcat-link">Cables</a>
+                <a href="category.html?cat=Electronic%20Accessories&sub=Computer%20Accessories" class="subcat-link">Computer Accessories</a>
+              </div>
+            </div>
+            <div class="p-4 subcat-panel d-none" data-cat="Groceries & Pets">
+              <div class="fw-semibold mb-2">Groceries &amp; Pets</div>
+              <div class="subcat-grid">
+                <a href="category.html?cat=Groceries%20%26%20Pets&sub=Beverages" class="subcat-link">Beverages</a>
+                <a href="category.html?cat=Groceries%20%26%20Pets&sub=Rice%20%26%20Staples" class="subcat-link">Rice &amp; Staples</a>
+                <a href="category.html?cat=Groceries%20%26%20Pets&sub=Pet%20Food" class="subcat-link">Pet Food</a>
+                <a href="category.html?cat=Groceries%20%26%20Pets&sub=Cleaning" class="subcat-link">Cleaning</a>
+              </div>
+            </div>
+            <div class="p-4 subcat-panel d-none" data-cat="Babies & Toys">
+              <div class="fw-semibold mb-2">Babies &amp; Toys</div>
+              <div class="subcat-grid">
+                <a href="category.html?cat=Babies%20%26%20Toys&sub=Diapers" class="subcat-link">Diapers</a>
+                <a href="category.html?cat=Babies%20%26%20Toys&sub=Baby%20Care" class="subcat-link">Baby Care</a>
+                <a href="category.html?cat=Babies%20%26%20Toys&sub=Toys" class="subcat-link">Toys</a>
+                <a href="category.html?cat=Babies%20%26%20Toys&sub=Learning" class="subcat-link">Learning</a>
+              </div>
+            </div>
+            <div class="p-4 subcat-panel d-none" data-cat="Home & Lifestyle">
+              <div class="fw-semibold mb-2">Home &amp; Lifestyle</div>
+              <div class="subcat-grid">
+                <a href="category.html?cat=Home%20%26%20Lifestyle&sub=Home%20Decor" class="subcat-link">Home Decor</a>
+                <a href="category.html?cat=Home%20%26%20Lifestyle&sub=Kitchen%20%26%20Dining" class="subcat-link">Kitchen &amp; Dining</a>
+                <a href="category.html?cat=Home%20%26%20Lifestyle&sub=Bedding" class="subcat-link">Bedding</a>
+                <a href="category.html?cat=Home%20%26%20Lifestyle&sub=Lighting" class="subcat-link">Lighting</a>
+              </div>
+            </div>
+            <div class="p-4 subcat-panel d-none" data-cat="Sports & Outdoor">
+              <div class="fw-semibold mb-2">Sports &amp; Outdoor</div>
+              <div class="subcat-grid">
+                <a href="category.html?cat=Sports%20%26%20Outdoor&sub=Fitness" class="subcat-link">Fitness</a>
+                <a href="category.html?cat=Sports%20%26%20Outdoor&sub=Outdoor" class="subcat-link">Outdoor</a>
+                <a href="category.html?cat=Sports%20%26%20Outdoor&sub=Team%20Sports" class="subcat-link">Team Sports</a>
+                <a href="category.html?cat=Sports%20%26%20Outdoor&sub=Cycling" class="subcat-link">Cycling</a>
+              </div>
+            </div>
+            <div class="p-4 subcat-panel d-none" data-cat="Motors/Tools/DIY">
+              <div class="fw-semibold mb-2">Motors/Tools/DIY</div>
+              <div class="subcat-grid">
+                <a href="category.html?cat=Motors/Tools/DIY&sub=Car%20Accessories" class="subcat-link">Car Accessories</a>
+                <a href="category.html?cat=Motors/Tools/DIY&sub=Tools" class="subcat-link">Tools</a>
+                <a href="category.html?cat=Motors/Tools/DIY&sub=Motorbike" class="subcat-link">Motorbike</a>
+                <a href="category.html?cat=Motors/Tools/DIY&sub=DIY" class="subcat-link">DIY</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
+
+    <nav class="mobile-nav d-md-none border-top">
+  <div class="container py-2">
+    <div class="text-muted small">Mobile nav placeholder</div>
+  </div>
+</nav>
+
 
     <main class="page order-success-page">
       <div class="container py-5">
@@ -66,13 +275,120 @@
       </div>
     </main>
 
-    <div id="site-footer"></div>
+    <footer class="site-footer">
+  <div class="container py-5">
+    <div class="row g-4">
+      <div class="col-6 col-lg-3">
+        <h6 class="text-uppercase fw-semibold">Customer Care</h6>
+        <ul class="list-unstyled small">
+          <li><a href="../pages/help.html" class="footer-link">Help Center</a></li>
+          <li><a href="../pages/returns.html" class="footer-link">How to Return</a></li>
+          <li><a href="../pages/contact.html" class="footer-link">Contact Us</a></li>
+          <li><a href="#" class="footer-link">Track Order</a></li>
+          <li><a href="#" class="footer-link">Shipping &amp; Delivery</a></li>
+        </ul>
+      </div>
+      <div class="col-6 col-lg-3">
+        <h6 class="text-uppercase fw-semibold">Earn with Daraz</h6>
+        <ul class="list-unstyled small">
+          <li><a href="#" class="footer-link">Sell on Daraz</a></li>
+          <li><a href="#" class="footer-link">Affiliate Program</a></li>
+          <li><a href="#" class="footer-link">Daraz University</a></li>
+          <li><a href="#" class="footer-link">Seller Center</a></li>
+        </ul>
+      </div>
+      <div class="col-6 col-lg-3">
+        <h6 class="text-uppercase fw-semibold">About Daraz</h6>
+        <ul class="list-unstyled small">
+          <li><a href="#" class="footer-link">About Us</a></li>
+          <li><a href="#" class="footer-link">Careers</a></li>
+          <li><a href="#" class="footer-link">Privacy Policy</a></li>
+          <li><a href="#" class="footer-link">Terms &amp; Conditions</a></li>
+        </ul>
+      </div>
+      <div class="col-6 col-lg-3">
+        <h6 class="text-uppercase fw-semibold">International</h6>
+        <ul class="list-unstyled small">
+          <li><a href="#" class="footer-link">Pakistan</a></li>
+          <li><a href="#" class="footer-link">Bangladesh</a></li>
+          <li><a href="#" class="footer-link">Sri Lanka</a></li>
+          <li><a href="#" class="footer-link">Myanmar</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="row g-4 mt-2">
+      <div class="col-lg-6">
+        <h6 class="text-uppercase fw-semibold">Payment Methods</h6>
+        <div class="d-flex flex-wrap gap-2">
+          <span class="payment-pill">COD</span>
+          <span class="payment-pill"><i class="fa-brands fa-cc-visa"></i> Visa</span>
+          <span class="payment-pill"><i class="fa-brands fa-cc-mastercard"></i> MasterCard</span>
+          <span class="payment-pill"><i class="fa-solid fa-building-columns"></i> eBanking</span>
+        </div>
+      </div>
+      <div class="col-lg-6">
+        <h6 class="text-uppercase fw-semibold">Download App</h6>
+        <div class="d-flex align-items-center gap-3">
+          <div class="app-badge">
+            <i class="fa-brands fa-apple"></i>
+            <div>
+              <small>Download on</small>
+              <div class="fw-semibold">App Store</div>
+            </div>
+          </div>
+          <div class="app-badge">
+            <i class="fa-brands fa-google-play"></i>
+            <div>
+              <small>Get it on</small>
+              <div class="fw-semibold">Google Play</div>
+            </div>
+          </div>
+        </div>
+        <div class="d-flex align-items-center gap-3 mt-3">
+          <a href="#" class="social-link"><i class="fa-brands fa-facebook-f"></i></a>
+          <a href="#" class="social-link"><i class="fa-brands fa-instagram"></i></a>
+          <a href="#" class="social-link"><i class="fa-brands fa-youtube"></i></a>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer-bottom mt-4 pt-3 border-top small text-muted">
+      © 2026 Daraz Inspired. All rights reserved.
+    </div>
+  </div>
+</footer>
+
+<div id="toast-container" class="toast-container position-fixed top-0 end-0 p-3">
+  <div id="appToast" class="toast align-items-center text-bg-primary border-0" role="alert" aria-live="assertive" aria-atomic="true">
+    <div class="d-flex">
+      <div class="toast-body" id="appToastBody">Notification</div>
+      <button type="button" class="btn-close btn-close-white me-2 m-auto" data-bs-dismiss="toast" aria-label="Close"></button>
+    </div>
+  </div>
+</div>
+
+<div class="modal fade" id="confirmModal" tabindex="-1" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="confirmTitle">Confirm</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body" id="confirmMessage">Are you sure?</div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-outline-secondary" data-bs-dismiss="modal" id="confirmCancel">Cancel</button>
+        <button type="button" class="btn btn-dark" id="confirmOk">Confirm</button>
+      </div>
+    </div>
+  </div>
+</div>
+
 
     <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
     <script src="../assets/js/ui.js"></script>
     <script src="../assets/js/store.js"></script>
-    <script src="../assets/js/cart.js"></script>
     <script src="../assets/js/auth.js"></script>
     <script src="../assets/js/app.js"></script>
     <script src="../assets/js/order-success.js"></script>
