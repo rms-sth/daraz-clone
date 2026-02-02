@@ -12,14 +12,146 @@
     <div id="site-header"></div>
     <div id="mobile-nav"></div>
 
-    <main class="page">
-      <div class="container py-4">
-        <div class="page-header">
-          <h1 class="h4 mb-2">Home</h1>
-          <p class="text-muted mb-0">Content will be added in upcoming steps.</p>
+    <main class="page home-page">
+      <section class="hero-section py-4">
+        <div class="container">
+          <div id="heroCarousel" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-indicators">
+              <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+              <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+              <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
+            </div>
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                <div class="hero-slide">
+                  <div class="row align-items-center g-3">
+                    <div class="col-lg-6">
+                      <div class="hero-content">
+                        <span class="badge text-bg-warning text-uppercase">Mega Deal</span>
+                        <h2 class="mt-3">Up to 50% off on fashion picks</h2>
+                        <p class="text-muted">Discover trending styles and accessories for every occasion.</p>
+                        <a href="category.html?cat=Women%27s%20Fashion" class="btn btn-dark btn-sm">Shop Now</a>
+                      </div>
+                    </div>
+                    <div class="col-lg-6 d-none d-lg-block">
+                      <img src="../assets/img/placeholder.svg" alt="Fashion" class="img-fluid hero-image" />
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="carousel-item">
+                <div class="hero-slide">
+                  <div class="row align-items-center g-3">
+                    <div class="col-lg-6">
+                      <div class="hero-content">
+                        <span class="badge text-bg-danger text-uppercase">Tech Week</span>
+                        <h2 class="mt-3">Best deals on smartphones</h2>
+                        <p class="text-muted">Upgrade your tech with exclusive discounts and offers.</p>
+                        <a href="category.html?cat=Electronic%20Devices" class="btn btn-dark btn-sm">Explore Electronics</a>
+                      </div>
+                    </div>
+                    <div class="col-lg-6 d-none d-lg-block">
+                      <img src="../assets/img/placeholder.svg" alt="Electronics" class="img-fluid hero-image" />
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="carousel-item">
+                <div class="hero-slide">
+                  <div class="row align-items-center g-3">
+                    <div class="col-lg-6">
+                      <div class="hero-content">
+                        <span class="badge text-bg-success text-uppercase">Home Picks</span>
+                        <h2 class="mt-3">Kitchen essentials delivered fast</h2>
+                        <p class="text-muted">Cook smarter with trusted brands and easy returns.</p>
+                        <a href="category.html?cat=Home%20%26%20Lifestyle" class="btn btn-dark btn-sm">Shop Home</a>
+                      </div>
+                    </div>
+                    <div class="col-lg-6 d-none d-lg-block">
+                      <img src="../assets/img/placeholder.svg" alt="Home" class="img-fluid hero-image" />
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#heroCarousel" data-bs-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#heroCarousel" data-bs-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Next</span>
+            </button>
+          </div>
+        </div>
+      </section>
+
+      <section class="flash-sale py-4">
+        <div class="container">
+          <div class="section-head d-flex align-items-center justify-content-between flex-wrap gap-2">
+            <div class="d-flex align-items-center gap-3">
+              <h2 class="section-title h5 mb-0">Flash Sale</h2>
+              <div class="countdown d-flex align-items-center gap-2">
+                <span class="badge text-bg-dark">Ending in</span>
+                <span id="flashCountdown" class="countdown-time">00:00:00</span>
+              </div>
+            </div>
+            <a href="category.html?cat=Health%20%26%20Beauty" class="btn btn-sm btn-outline-danger">Shop More</a>
+          </div>
+          <div id="flash-sale-list" class="product-strip mt-3"></div>
+        </div>
+      </section>
+
+      <section class="top-categories py-4">
+        <div class="container">
+          <div class="section-head d-flex align-items-center justify-content-between">
+            <h2 class="section-title h5 mb-0">Top Categories</h2>
+            <a href="category.html" class="btn btn-sm btn-outline-secondary">View All</a>
+          </div>
+          <div id="top-categories" class="row g-3 mt-2"></div>
+        </div>
+      </section>
+
+      <section class="just-for-you py-4">
+        <div class="container">
+          <div class="section-head d-flex align-items-center justify-content-between">
+            <div>
+              <h2 class="section-title h5 mb-0">Just For You</h2>
+              <small class="text-muted">Fresh picks based on your browsing</small>
+            </div>
+            <span class="badge text-bg-light border">Trending now</span>
+          </div>
+          <div id="just-for-you-list" class="row g-3 mt-2"></div>
+          <div id="load-indicator" class="text-center text-muted small py-3">Loading more deals...</div>
+        </div>
+      </section>
+
+      <section class="recently-viewed py-4">
+        <div class="container">
+          <div class="section-head d-flex align-items-center justify-content-between">
+            <h2 class="section-title h5 mb-0">Recently Viewed</h2>
+            <a href="wishlist.html" class="btn btn-sm btn-outline-secondary">View Wishlist</a>
+          </div>
+          <div id="recently-viewed-list" class="row g-3 mt-2"></div>
+        </div>
+      </section>
+    </main>
+
+    <button id="backToTop" class="back-to-top btn btn-dark" type="button" aria-label="Back to top">
+      <i class="fa-solid fa-arrow-up"></i>
+    </button>
+
+    <div class="modal fade" id="quickViewModal" tabindex="-1" aria-hidden="true">
+      <div class="modal-dialog modal-lg modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title">Quick View</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body" id="quickViewBody"></div>
         </div>
       </div>
-    </main>
+    </div>
 
     <div id="site-footer"></div>
 
@@ -30,5 +162,6 @@
     <script src="../assets/js/cart.js"></script>
     <script src="../assets/js/auth.js"></script>
     <script src="../assets/js/app.js"></script>
+    <script src="../assets/js/home.js"></script>
   </body>
 </html>

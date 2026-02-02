@@ -12,14 +12,44 @@
     <div id="site-header"></div>
     <div id="mobile-nav"></div>
 
-    <main class="page">
+    <main class="page order-details-page">
       <div class="container py-4">
-        <div class="page-header">
-          <h1 class="h4 mb-2">Order Details</h1>
-          <p class="text-muted mb-0">Content will be added in upcoming steps.</p>
-        </div>
+        <a href="orders.html" class="btn btn-sm btn-outline-secondary mb-3"><i class="fa-solid fa-arrow-left"></i> Back to Orders</a>
+        <div id="order-detail"></div>
       </div>
     </main>
+
+    <div class="modal fade" id="returnModal" tabindex="-1" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title">Request Return</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <form id="returnForm">
+              <div class="mb-3">
+                <label class="form-label">Order ID</label>
+                <input type="text" class="form-control" name="orderId" id="returnOrderId" readonly />
+              </div>
+              <div class="mb-3">
+                <label class="form-label">Reason</label>
+                <select class="form-select" name="reason">
+                  <option value="Damaged">Damaged Item</option>
+                  <option value="Wrong">Wrong Product</option>
+                  <option value="Quality">Quality Issue</option>
+                </select>
+              </div>
+              <div class="mb-3">
+                <label class="form-label">Notes</label>
+                <textarea class="form-control" name="notes"></textarea>
+              </div>
+              <button class="btn btn-dark w-100" type="submit">Submit Request</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
 
     <div id="site-footer"></div>
 
@@ -30,5 +60,6 @@
     <script src="../assets/js/cart.js"></script>
     <script src="../assets/js/auth.js"></script>
     <script src="../assets/js/app.js"></script>
+    <script src="../assets/js/order-details.js"></script>
   </body>
 </html>

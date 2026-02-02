@@ -12,11 +12,90 @@
     <div id="site-header"></div>
     <div id="mobile-nav"></div>
 
-    <main class="page">
+    <main class="page account-page">
       <div class="container py-4">
-        <div class="page-header">
-          <h1 class="h4 mb-2">My Account</h1>
-          <p class="text-muted mb-0">Content will be added in upcoming steps.</p>
+        <div class="row g-4">
+          <aside class="col-lg-3">
+            <div class="card account-sidebar">
+              <div class="card-body">
+                <div class="d-flex align-items-center gap-2 mb-3">
+                  <div class="avatar"><i class="fa-solid fa-user"></i></div>
+                  <div>
+                    <div class="fw-semibold" id="account-name">Guest</div>
+                    <div class="small text-muted">Account</div>
+                  </div>
+                </div>
+                <div class="list-group">
+                  <a href="account.html" class="list-group-item list-group-item-action active">Profile</a>
+                  <a href="orders.html" class="list-group-item list-group-item-action">Orders</a>
+                  <a href="returns.html" class="list-group-item list-group-item-action">Returns</a>
+                  <a href="wishlist.html" class="list-group-item list-group-item-action">Wishlist</a>
+                  <a href="#" class="list-group-item list-group-item-action" id="logoutBtn">Logout</a>
+                </div>
+              </div>
+            </div>
+          </aside>
+
+          <section class="col-lg-9">
+            <div class="row g-3">
+              <div class="col-md-4">
+                <div class="card stat-card">
+                  <div class="card-body">
+                    <div class="text-muted small">Orders</div>
+                    <div class="h4" id="stat-orders">0</div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-4">
+                <div class="card stat-card">
+                  <div class="card-body">
+                    <div class="text-muted small">Wishlist</div>
+                    <div class="h4" id="stat-wishlist">0</div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-4">
+                <div class="card stat-card">
+                  <div class="card-body">
+                    <div class="text-muted small">Returns</div>
+                    <div class="h4" id="stat-returns">0</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="card profile-card mt-4">
+              <div class="card-body">
+                <h2 class="h6">Profile</h2>
+                <form id="profileForm">
+                  <div class="row g-3">
+                    <div class="col-md-6">
+                      <label class="form-label">Full Name</label>
+                      <input type="text" class="form-control" name="name" id="profileName" required />
+                    </div>
+                    <div class="col-md-6">
+                      <label class="form-label">Email/Phone</label>
+                      <input type="text" class="form-control" name="identifier" id="profileIdentifier" required />
+                    </div>
+                    <div class="col-md-6">
+                      <label class="form-label">City</label>
+                      <input type="text" class="form-control" name="city" id="profileCity" />
+                    </div>
+                    <div class="col-md-6">
+                      <label class="form-label">Province</label>
+                      <input type="text" class="form-control" name="province" id="profileProvince" />
+                    </div>
+                    <div class="col-md-12">
+                      <label class="form-label">Address Line</label>
+                      <input type="text" class="form-control" name="address" id="profileAddress" />
+                    </div>
+                  </div>
+                  <div id="profileMessage" class="small mt-2"></div>
+                  <button class="btn btn-dark mt-3" type="submit">Save Changes</button>
+                </form>
+              </div>
+            </div>
+          </section>
         </div>
       </div>
     </main>
@@ -30,5 +109,6 @@
     <script src="../assets/js/cart.js"></script>
     <script src="../assets/js/auth.js"></script>
     <script src="../assets/js/app.js"></script>
+    <script src="../assets/js/account.js"></script>
   </body>
 </html>

@@ -1,5 +1,4 @@
-const Cart = {
-  init() {
-    // Placeholder for cart logic (Prompt 19)
-  }
-};
+/* global Store */
+
+const Cart = Store.Cart;
+const Wishlist = Store.Wishlist;

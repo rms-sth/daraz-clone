@@ -12,11 +12,22 @@
     <div id="site-header"></div>
     <div id="mobile-nav"></div>
 
-    <main class="page">
+    <main class="page wishlist-page">
       <div class="container py-4">
-        <div class="page-header">
-          <h1 class="h4 mb-2">Wishlist</h1>
-          <p class="text-muted mb-0">Content will be added in upcoming steps.</p>
+        <div class="d-flex align-items-center justify-content-between flex-wrap gap-2">
+          <h1 class="h4 mb-0">Wishlist</h1>
+          <a href="home.html" class="btn btn-sm btn-outline-secondary">Continue Shopping</a>
+        </div>
+
+        <div id="wishlist-grid" class="row g-3 mt-3"></div>
+        <div id="wishlist-empty" class="text-center text-muted mt-4 d-none">
+          <i class="fa-regular fa-heart fa-2x mb-2"></i>
+          <p>Your wishlist is empty.</p>
+        </div>
+
+        <div class="followed-stores mt-4">
+          <h2 class="h6">Followed Stores</h2>
+          <div id="followed-stores-list" class="row g-3 mt-2"></div>
         </div>
       </div>
     </main>
@@ -30,5 +41,6 @@
     <script src="../assets/js/cart.js"></script>
     <script src="../assets/js/auth.js"></script>
     <script src="../assets/js/app.js"></script>
+    <script src="../assets/js/wishlist.js"></script>
   </body>
 </html>

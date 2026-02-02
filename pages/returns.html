@@ -12,11 +12,71 @@
     <div id="site-header"></div>
     <div id="mobile-nav"></div>
 
-    <main class="page">
+    <main class="page returns-page">
       <div class="container py-4">
-        <div class="page-header">
-          <h1 class="h4 mb-2">Returns</h1>
-          <p class="text-muted mb-0">Content will be added in upcoming steps.</p>
+        <div class="returns-hero mb-4">
+          <h1 class="h4 mb-2">How to Return</h1>
+          <p class="text-muted">Follow the steps below to initiate a return request.</p>
+        </div>
+
+        <div class="row g-4">
+          <div class="col-lg-7">
+            <div class="card returns-card mb-4">
+              <div class="card-body">
+                <h2 class="h6">Return Steps</h2>
+                <ol class="steps-list">
+                  <li>Login to your account and go to My Orders.</li>
+                  <li>Select the order and click “Request Return”.</li>
+                  <li>Choose a reason and submit the request.</li>
+                  <li>Package the item securely for pickup.</li>
+                </ol>
+              </div>
+            </div>
+
+            <div class="card returns-card">
+              <div class="card-body">
+                <h2 class="h6">Conditions for Returns</h2>
+                <ul class="conditions-list">
+                  <li>Product must be unused and unworn.</li>
+                  <li>Include original tags, manual, and warranty card.</li>
+                  <li>Return within 7-14 days depending on product category.</li>
+                  <li>Original packaging must be intact.</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-5">
+            <div class="card returns-card">
+              <div class="card-body">
+                <h2 class="h6">Return Request Form</h2>
+                <form id="returnRequestForm">
+                  <div class="mb-3">
+                    <label class="form-label">Order ID</label>
+                    <input type="text" class="form-control" name="orderId" required />
+                  </div>
+                  <div class="mb-3">
+                    <label class="form-label">Product</label>
+                    <input type="text" class="form-control" name="product" required />
+                  </div>
+                  <div class="mb-3">
+                    <label class="form-label">Reason</label>
+                    <select class="form-select" name="reason" required>
+                      <option value="Damaged">Damaged Item</option>
+                      <option value="Wrong">Wrong Product</option>
+                      <option value="Quality">Quality Issue</option>
+                    </select>
+                  </div>
+                  <div class="mb-3">
+                    <label class="form-label">Upload Image (mock)</label>
+                    <input type="file" class="form-control" />
+                  </div>
+                  <button class="btn btn-dark w-100" type="submit">Submit Request</button>
+                </form>
+                <div id="returnMessage" class="small mt-2"></div>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </main>
@@ -30,5 +90,6 @@
     <script src="../assets/js/cart.js"></script>
     <script src="../assets/js/auth.js"></script>
     <script src="../assets/js/app.js"></script>
+    <script src="../assets/js/returns.js"></script>
   </body>
 </html>

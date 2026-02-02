@@ -12,11 +12,21 @@
     <div id="site-header"></div>
     <div id="mobile-nav"></div>
 
-    <main class="page">
-      <div class="container py-4">
-        <div class="page-header">
-          <h1 class="h4 mb-2">Order Success</h1>
-          <p class="text-muted mb-0">Content will be added in upcoming steps.</p>
+    <main class="page order-success-page">
+      <div class="container py-5">
+        <div class="card success-card text-center mx-auto">
+          <div class="card-body">
+            <div class="success-icon mb-3">
+              <i class="fa-solid fa-circle-check"></i>
+            </div>
+            <h1 class="h4 mb-2">Order Placed Successfully!</h1>
+            <p class="text-muted mb-4">Thank you for shopping with us. Your order has been confirmed.</p>
+            <div class="order-summary text-start" id="order-summary"></div>
+            <div class="d-flex flex-wrap justify-content-center gap-2 mt-4">
+              <a href="orders.html" class="btn btn-outline-dark">Track Order</a>
+              <a href="home.html" class="btn btn-dark">Continue Shopping</a>
+            </div>
+          </div>
         </div>
       </div>
     </main>
@@ -30,5 +40,6 @@
     <script src="../assets/js/cart.js"></script>
     <script src="../assets/js/auth.js"></script>
     <script src="../assets/js/app.js"></script>
+    <script src="../assets/js/order-success.js"></script>
   </body>
 </html>
