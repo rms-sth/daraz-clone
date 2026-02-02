@@ -66,6 +66,23 @@ const ProductPage = (() => {
     $('#btnWishlist').toggleClass('active', wishlist.has(state.product.id));
   };
 
+  const updateReviewAccess = () => {
+    const session = storage.get('session', null);
+    const form = $('#reviewForm');
+    const note = $('#reviewAuthNote');
+    const isLoggedIn = !!(session && session.user);
+    if (isLoggedIn) {
+      note.addClass('d-none');
+      form.find('input, textarea, select, button').prop('disabled', false);
+      form.find('input[name="name"]').val(session.user.name || '').prop('readonly', true);
+    } else {
+      note.removeClass('d-none');
+      form.find('input, textarea, select').prop('disabled', false);
+      form.find('button[type="submit"]').prop('disabled', true);
+      form.find('input[name="name"]').val('').prop('readonly', false);
+    }
+  };
+
   const addToCart = () => {
     const variant = { color: state.selectedColor, size: state.selectedSize };
 
@@ -276,6 +293,7 @@ const ProductPage = (() => {
 
     $(document).on('cart:updated', updateCartCount);
     $(document).on('header:loaded', updateCartCount);
+    $(document).on('session:updated', updateReviewAccess);
   };
 
   const init = () => {
@@ -289,6 +307,7 @@ const ProductPage = (() => {
     updateWishlistState();
     updateCartCount();
     updateRecent(state.product.id);
+    updateReviewAccess();
 
     bindEvents();
   };
