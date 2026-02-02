@@ -252,12 +252,12 @@ textarea:focus-visible {
 .image-lightbox {
   position: fixed;
   inset: 0;
-  background: rgba(15, 15, 15, 0.85);
+  background: rgba(15, 15, 15, 0.6);
   display: none;
   align-items: center;
   justify-content: center;
   z-index: 1060;
-  padding: 1.5rem;
+  padding: 0.75rem;
 }
 
 .image-lightbox.active {
@@ -265,12 +265,13 @@ textarea:focus-visible {
 }
 
 .lightbox-panel {
-  width: min(1100px, 96vw);
-  background: #ffffff;
+  width: min(1400px, 98vw);
+  background: transparent;
+  backdrop-filter: none;
   border-radius: 1rem;
-  padding: 1.5rem;
+  padding: 0;
   position: relative;
-  box-shadow: 0 24px 60px rgba(0, 0, 0, 0.35);
+  box-shadow: none;
 }
 
 .lightbox-close {
@@ -280,18 +281,18 @@ textarea:focus-visible {
   width: 36px;
   height: 36px;
   border-radius: 50%;
-  border: 1px solid rgba(0, 0, 0, 0.1);
-  background: #ffffff;
-}
-
-.lightbox-hint {
-  margin-bottom: 0.75rem;
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  background: rgba(0, 0, 0, 0.45);
+  color: #ffffff;
+  cursor: pointer;
+  z-index: 2;
 }
 
 .zoom-stage {
-  background: #f6f7fb;
+  background: transparent;
   border-radius: 1rem;
-  min-height: 520px;
+  min-height: 78vh;
+  max-height: 85vh;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -300,13 +301,15 @@ textarea:focus-visible {
 }
 
 .zoom-stage img {
-  max-width: 100%;
-  max-height: 640px;
+  max-width: 98vw;
+  max-height: 85vh;
   transform-origin: center;
-  transition: transform 0.08s ease;
+  transition: transform 0.2s ease-out;
   cursor: grab;
   user-select: none;
   -webkit-user-drag: none;
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.35);
+  border-radius: 0.8rem;
 }
 
 .zoom-stage.dragging img {
@@ -317,6 +320,45 @@ textarea:focus-visible {
   display: flex;
   align-items: center;
   gap: 0.75rem;
+  color: #ffffff;
+}
+
+.zoom-controls--compact {
+  width: min(520px, 80vw);
+  margin: 0 auto;
+}
+
+.zoom-controls--compact .form-range {
+  height: 0.6rem;
+}
+
+.zoom-controls--compact .form-range::-webkit-slider-thumb {
+  width: 14px;
+  height: 14px;
+}
+
+.zoom-controls--compact .form-range::-moz-range-thumb {
+  width: 14px;
+  height: 14px;
+}
+
+.zoom-controls .form-range::-webkit-slider-runnable-track {
+  background: rgba(255, 255, 255, 0.4);
+}
+
+.zoom-controls .form-range::-moz-range-track {
+  background: rgba(255, 255, 255, 0.4);
+}
+
+.zoom-controls .btn-outline-secondary {
+  border-color: rgba(255, 255, 255, 0.4);
+  color: #ffffff;
+  background: rgba(0, 0, 0, 0.35);
+}
+
+.zoom-controls .btn-outline-secondary:hover {
+  background: rgba(255, 255, 255, 0.15);
+  color: #ffffff;
 }
 
 .variant-pill {

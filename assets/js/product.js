@@ -135,7 +135,8 @@ const ProductPage = (() => {
     zoomStage.on('wheel', (event) => {
       event.preventDefault();
       const delta = event.originalEvent.deltaY;
-      scale = clamp(scale + (delta > 0 ? -0.1 : 0.1), 1, 3);
+      const step = event.originalEvent.deltaMode === 1 ? 0.12 : 0.08;
+      scale = clamp(scale + (delta > 0 ? -step : step), 1, 3);
       if (scale === 1) {
         currentX = 0;
         currentY = 0;
@@ -187,20 +188,6 @@ const ProductPage = (() => {
       applyTransform();
     });
 
-    $('#zoomIn').on('click', () => {
-      scale = clamp(scale + 0.2, 1, 3);
-      applyTransform();
-    });
-
-    $('#zoomOut').on('click', () => {
-      scale = clamp(scale - 0.2, 1, 3);
-      if (scale === 1) {
-        currentX = 0;
-        currentY = 0;
-      }
-      applyTransform();
-    });
-
     $('#zoomReset').on('click', resetTransform);
 
     const closePreview = () => {
@@ -208,7 +195,17 @@ const ProductPage = (() => {
       resetTransform();
     };
 
-    $('#lightboxClose').on('click', closePreview);
+    $('#lightboxClose').on('click', (event) => {
+      event.preventDefault();
+      event.stopPropagation();
+      closePreview();
+    });
+    $(document).on('click', '#lightboxClose', (event) => {
+      event.preventDefault();
+      event.stopPropagation();
+      closePreview();
+    });
+
     lightbox.on('click', (event) => {
       if ($(event.target).is('#imageLightbox')) {
         closePreview();
