@@ -89,21 +89,6 @@ const ProductPage = (() => {
   };
 
   const bindEvents = () => {
-    const updateZoom = (value) => {
-      const zoom = Number(value) || 1;
-      $('#previewImage').css('transform', `scale(${zoom})`);
-      $('#zoomValue').text(`${Math.round(zoom * 100)}%`);
-    };
-
-    const openPreview = () => {
-      const src = $('#mainImage').attr('src');
-      $('#previewImage').attr('src', src);
-      $('#zoomRange').val(1);
-      updateZoom(1);
-      const modal = bootstrap.Modal.getOrCreateInstance(document.getElementById('imagePreviewModal'));
-      modal.show();
-    };
-
     $('#product-detail').on('click', '.thumb-btn', function () {
       const image = $(this).data('image');
       $('#mainImage').attr('src', image);
@@ -111,11 +96,115 @@ const ProductPage = (() => {
       $(this).addClass('active');
     });
 
-    $('#product-detail').on('click', '#mainImage, #openPreview', openPreview);
+    const previewModal = document.getElementById('imagePreviewModal');
+    const previewImage = $('#previewImage');
+    const zoomStage = $('#zoomStage');
+    const zoomRange = $('#zoomRange');
+    const zoomValue = $('#zoomValue');
+    let scale = 1;
+    let isDragging = false;
+    let startX = 0;
+    let startY = 0;
+    let currentX = 0;
+    let currentY = 0;
 
-    $('#zoomRange').on('input', function () {
-      updateZoom($(this).val());
+    const clamp = (value, min, max) => Math.min(Math.max(value, min), max);
+
+    const applyTransform = () => {
+      previewImage.css('transform', `translate(${currentX}px, ${currentY}px) scale(${scale})`);
+      zoomRange.val(scale);
+      zoomValue.text(`${Math.round(scale * 100)}%`);
+    };
+
+    const resetTransform = () => {
+      scale = 1;
+      currentX = 0;
+      currentY = 0;
+      applyTransform();
+    };
+
+    const openPreview = () => {
+      const src = $('#mainImage').attr('src');
+      previewImage.attr('src', src);
+      resetTransform();
+      const instance = bootstrap.Modal.getOrCreateInstance(previewModal);
+      instance.show();
+    };
+
+    $('#product-detail').on('click', '#mainImage', openPreview);
+
+    zoomStage.on('wheel', (event) => {
+      event.preventDefault();
+      const delta = event.originalEvent.deltaY;
+      scale = clamp(scale + (delta > 0 ? -0.1 : 0.1), 1, 3);
+      if (scale === 1) {
+        currentX = 0;
+        currentY = 0;
+      }
+      applyTransform();
     });
+
+    zoomStage.on('mousedown', (event) => {
+      event.preventDefault();
+      if (scale <= 1) return;
+      isDragging = true;
+      zoomStage.addClass('dragging');
+      startX = event.clientX - currentX;
+      startY = event.clientY - currentY;
+    });
+
+    previewImage.on('dragstart', (event) => {
+      event.preventDefault();
+    });
+
+    $(document).on('mousemove', (event) => {
+      if (!isDragging) return;
+      currentX = event.clientX - startX;
+      currentY = event.clientY - startY;
+      applyTransform();
+    });
+
+    $(document).on('mouseup', () => {
+      if (!isDragging) return;
+      isDragging = false;
+      zoomStage.removeClass('dragging');
+    });
+
+    zoomStage.on('dblclick', () => {
+      if (scale === 1) {
+        scale = 2;
+        applyTransform();
+      } else {
+        resetTransform();
+      }
+    });
+
+    zoomRange.on('input', function () {
+      scale = clamp(Number($(this).val()) || 1, 1, 3);
+      if (scale === 1) {
+        currentX = 0;
+        currentY = 0;
+      }
+      applyTransform();
+    });
+
+    $('#zoomIn').on('click', () => {
+      scale = clamp(scale + 0.2, 1, 3);
+      applyTransform();
+    });
+
+    $('#zoomOut').on('click', () => {
+      scale = clamp(scale - 0.2, 1, 3);
+      if (scale === 1) {
+        currentX = 0;
+        currentY = 0;
+      }
+      applyTransform();
+    });
+
+    $('#zoomReset').on('click', resetTransform);
+
+    $(previewModal).on('hidden.bs.modal', resetTransform);
 
     $('#product-detail').on('click', '.color-pill', function () {
       $('.color-pill').removeClass('active');
