@@ -434,6 +434,24 @@ textarea:focus-visible {
   box-shadow: 0 8px 18px rgba(0, 0, 0, 0.08);
 }
 
+.checkout-page .nav-pills .nav-link {
+  border: 1px solid rgba(248, 86, 6, 0.2);
+  color: #1f1f1f;
+  background: #ffffff;
+}
+
+.checkout-page .nav-pills .nav-link.active {
+  background: var(--brand-orange);
+  border-color: var(--brand-orange);
+  color: #ffffff;
+  box-shadow: 0 8px 18px rgba(248, 86, 6, 0.25);
+}
+
+.checkout-page .form-check-input:checked {
+  background-color: var(--brand-orange);
+  border-color: var(--brand-orange);
+}
+
 .success-card {
   max-width: 720px;
   border: none;
