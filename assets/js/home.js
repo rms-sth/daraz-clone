@@ -35,7 +35,7 @@ const HomePage = (() => {
 
   const getProductData = ($item) => {
     if (!$item || !$item.length) return null;
-    const image = $item.data('image') || $item.find('img').first().attr('src') || '../assets/img/placeholder.svg';
+    const image = $item.data('image') || $item.find('img').first().attr('src') || '../assets/img/products/product-01.jpg';
     return {
       id: $item.data('id')?.toString(),
       title: $item.data('title') || $item.find('.product-title').text().trim(),

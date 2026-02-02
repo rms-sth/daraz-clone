@@ -56,7 +56,7 @@ const ProductPage = (() => {
       codAvailable: detail.data('cod') === true || detail.data('cod') === 'true',
       warranty: detail.data('warranty') || '',
       returnDays: Number(detail.data('return-days')) || 0,
-      image: $('#mainImage').attr('src') || '../assets/img/placeholder.svg',
+      image: $('#mainImage').attr('src') || '../assets/img/products/product-01.jpg',
     };
     return product;
   };

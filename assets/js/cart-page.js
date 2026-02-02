@@ -66,7 +66,7 @@ const CartPage = (() => {
         ...item,
         title: product.title || item.title || 'Product',
         price: product.price || item.price || 0,
-        image: product.image || item.image || '../assets/img/placeholder.svg',
+        image: product.image || item.image || '../assets/img/products/product-01.jpg',
         variantSummary: `${item.variant && item.variant.color ? item.variant.color : 'Standard'} / ${item.variant && item.variant.size ? item.variant.size : 'Free Size'}`,
       };
     });

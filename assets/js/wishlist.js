@@ -27,13 +27,13 @@ const WishlistPage = (() => {
 
   const normalizeWishlist = (items) => items.map((item) => {
     if (typeof item === 'string') {
-      return { id: item, title: 'Wishlist Item', price: 0, image: '../assets/img/placeholder.svg' };
+      return { id: item, title: 'Wishlist Item', price: 0, image: '../assets/img/products/product-01.jpg' };
     }
     return {
       id: item.id,
       title: item.title || 'Wishlist Item',
       price: item.price || 0,
-      image: item.image || '../assets/img/placeholder.svg',
+      image: item.image || '../assets/img/products/product-01.jpg',
     };
   });
 
@@ -72,7 +72,7 @@ const WishlistPage = (() => {
 
   const moveToCart = (id) => {
     const item = state.wishlist.find((entry) => (typeof entry === 'string' ? entry === id : entry.id === id));
-    const product = typeof item === 'string' ? { id: item, title: 'Wishlist Item', price: 0, image: '../assets/img/placeholder.svg' } : item;
+    const product = typeof item === 'string' ? { id: item, title: 'Wishlist Item', price: 0, image: '../assets/img/products/product-01.jpg' } : item;
 
     if (typeof Cart !== 'undefined' && typeof Cart.add === 'function') {
       Cart.add(product.id, { color: '', size: '' }, 1, product);

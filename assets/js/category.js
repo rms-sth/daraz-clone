@@ -57,7 +57,7 @@ const CategoryPage = (() => {
     rating: Number($el.data('rating')) || 0,
     stock: Number($el.data('stock')) || 0,
     location: ($el.data('location') || '').toString(),
-    image: $el.find('img').first().attr('src') || '../assets/img/placeholder.svg',
+    image: $el.find('img').first().attr('src') || '../assets/img/products/product-01.jpg',
   });
 
   const applyFilters = () => {

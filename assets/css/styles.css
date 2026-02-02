@@ -10,6 +10,16 @@ body {
   color: #1f1f1f;
 }
 
+.btn-primary {
+  --bs-btn-bg: var(--brand-orange);
+  --bs-btn-border-color: var(--brand-orange);
+  --bs-btn-hover-bg: #e84f05;
+  --bs-btn-hover-border-color: #e84f05;
+  --bs-btn-focus-shadow-rgb: 248, 86, 6;
+  --bs-btn-active-bg: #d94804;
+  --bs-btn-active-border-color: #d94804;
+}
+
 button:focus-visible,
 a:focus-visible,
 input:focus-visible,
@@ -79,6 +89,12 @@ textarea:focus-visible {
   object-fit: cover;
 }
 
+.product-thumb {
+  position: relative;
+  overflow: hidden;
+  border-radius: 0.8rem;
+}
+
 .price-row {
   display: flex;
   flex-wrap: wrap;
@@ -105,15 +121,39 @@ textarea:focus-visible {
 
 .wishlist-btn {
   position: absolute;
-  top: 10px;
-  right: 10px;
+  top: 12px;
+  right: 12px;
   border-radius: 50%;
+  width: 32px;
+  height: 32px;
+  padding: 0;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 2;
+  background: rgba(255, 255, 255, 0.92);
+  border: 1px solid rgba(31, 31, 31, 0.08);
+  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.1);
+  color: #ff5a3c;
+  transition: transform 0.18s ease, box-shadow 0.18s ease, background 0.18s ease;
 }
 
 .wishlist-btn.active {
-  background: #dc3545;
+  background: linear-gradient(135deg, #ff6a4a, #ff3b65);
   color: #fff;
-  border-color: #dc3545;
+  border-color: transparent;
+  box-shadow: 0 8px 18px rgba(255, 90, 60, 0.4);
+}
+
+.product-thumb.ratio > .wishlist-btn {
+  width: 32px !important;
+  height: 32px !important;
+  inset: 12px 12px auto auto !important;
+}
+
+.wishlist-btn:hover {
+  transform: translateY(-1px) scale(1.02);
+  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.14);
 }
 
 .category-card {

@@ -51,7 +51,7 @@ const SearchPage = (() => {
     brand: $el.data('brand') || '',
     price: Number($el.data('price')) || 0,
     rating: Number($el.data('rating')) || 0,
-    image: $el.find('img').first().attr('src') || '../assets/img/placeholder.svg',
+    image: $el.find('img').first().attr('src') || '../assets/img/products/product-01.jpg',
   });
 
   const applyFilters = () => {
