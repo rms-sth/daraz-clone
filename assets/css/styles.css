@@ -249,8 +249,43 @@ textarea:focus-visible {
   cursor: zoom-in;
 }
 
-.zoom-modal .modal-content {
+.image-lightbox {
+  position: fixed;
+  inset: 0;
+  background: rgba(15, 15, 15, 0.85);
+  display: none;
+  align-items: center;
+  justify-content: center;
+  z-index: 1060;
+  padding: 1.5rem;
+}
+
+.image-lightbox.active {
+  display: flex;
+}
+
+.lightbox-panel {
+  width: min(1100px, 96vw);
+  background: #ffffff;
   border-radius: 1rem;
+  padding: 1.5rem;
+  position: relative;
+  box-shadow: 0 24px 60px rgba(0, 0, 0, 0.35);
+}
+
+.lightbox-close {
+  position: absolute;
+  top: 14px;
+  right: 14px;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  background: #ffffff;
+}
+
+.lightbox-hint {
+  margin-bottom: 0.75rem;
 }
 
 .zoom-stage {

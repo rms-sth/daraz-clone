@@ -1,4 +1,4 @@
-/* global $, UI, bootstrap */
+/* global $, UI */
 
 const ProductPage = (() => {
   const state = {
@@ -96,7 +96,7 @@ const ProductPage = (() => {
       $(this).addClass('active');
     });
 
-    const previewModal = document.getElementById('imagePreviewModal');
+    const lightbox = $('#imageLightbox');
     const previewImage = $('#previewImage');
     const zoomStage = $('#zoomStage');
     const zoomRange = $('#zoomRange');
@@ -127,8 +127,7 @@ const ProductPage = (() => {
       const src = $('#mainImage').attr('src');
       previewImage.attr('src', src);
       resetTransform();
-      const instance = bootstrap.Modal.getOrCreateInstance(previewModal);
-      instance.show();
+      lightbox.addClass('active').attr('aria-hidden', 'false');
     };
 
     $('#product-detail').on('click', '#mainImage', openPreview);
@@ -204,7 +203,23 @@ const ProductPage = (() => {
 
     $('#zoomReset').on('click', resetTransform);
 
-    $(previewModal).on('hidden.bs.modal', resetTransform);
+    const closePreview = () => {
+      lightbox.removeClass('active').attr('aria-hidden', 'true');
+      resetTransform();
+    };
+
+    $('#lightboxClose').on('click', closePreview);
+    lightbox.on('click', (event) => {
+      if ($(event.target).is('#imageLightbox')) {
+        closePreview();
+      }
+    });
+
+    $(document).on('keydown', (event) => {
+      if (event.key === 'Escape' && lightbox.hasClass('active')) {
+        closePreview();
+      }
+    });
 
     $('#product-detail').on('click', '.color-pill', function () {
       $('.color-pill').removeClass('active');
